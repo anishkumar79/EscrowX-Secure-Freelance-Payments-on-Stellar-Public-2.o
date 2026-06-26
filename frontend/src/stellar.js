@@ -10,7 +10,8 @@ import {
   Networks as SDKNetworks,
   BASE_FEE,
   rpc,
-  Operation
+  Operation,
+  Contract
 } from '@stellar/stellar-sdk';
 
 const NETWORK = import.meta.env.VITE_STELLAR_NETWORK || 'testnet';
@@ -18,6 +19,7 @@ const RPC_URL = import.meta.env.VITE_SOROBAN_RPC_URL || 'https://soroban-testnet
 export const CONTRACT_ADDRESS = import.meta.env.VITE_CONTRACT_ADDRESS || 'CBGL7N5GANUBPAV2UHXC5UBW3JSXGNLAKOMVJD54YNIZF6WN6PHSMQAL';
 
 export const server = new rpc.Server(RPC_URL);
+export const contractClient = new Contract(CONTRACT_ADDRESS);
 
 // Initialize static kit
 StellarWalletsKit.init({
@@ -72,31 +74,30 @@ export async function invokeContract(functionName, args = [], signTx = true) {
   // Get source account
   const sourceAccount = await server.getAccount(address);
 
-  // Build the Soroban transaction
+  // Process arguments
+  const processedArgs = args.map(arg => {
+    // Encode custom objects or types if needed
+    if (arg && typeof arg === 'object' && arg._type) {
+      if (arg._type === 'address') {
+        return Address.fromString(arg.val).toScVal();
+      }
+      if (arg._type === 'i128') {
+        return nativeToScVal(BigInt(arg.val), { type: 'i128' });
+      }
+      if (arg._type === 'u64') {
+        return nativeToScVal(BigInt(arg.val), { type: 'u64' });
+      }
+    }
+    return nativeToScVal(arg);
+  });
+
+  // Build the Soroban transaction using the contract client
   let tx = new TransactionBuilder(sourceAccount, {
     fee: BASE_FEE,
     networkPassphrase: SDKNetworks.TESTNET,
   })
     .addOperation(
-      Operation.invokeContractFunction({
-        contract: CONTRACT_ADDRESS,
-        function: functionName,
-        args: args.map(arg => {
-          // Encode custom objects or types if needed
-          if (arg && typeof arg === 'object' && arg._type) {
-            if (arg._type === 'address') {
-              return Address.fromString(arg.val).toScVal();
-            }
-            if (arg._type === 'i128') {
-              return nativeToScVal(BigInt(arg.val), { type: 'i128' });
-            }
-            if (arg._type === 'u64') {
-              return nativeToScVal(BigInt(arg.val), { type: 'u64' });
-            }
-          }
-          return nativeToScVal(arg);
-        }),
-      })
+      contractClient.call(functionName, ...processedArgs)
     )
     .setTimeout(60)
     .build();
