@@ -92,7 +92,7 @@ async function executeFullLifecycle(name) {
         funded = true;
         break;
       }
-    } catch (e) {
+    } catch {
       await sleep(3000);
     }
     await sleep(3000);

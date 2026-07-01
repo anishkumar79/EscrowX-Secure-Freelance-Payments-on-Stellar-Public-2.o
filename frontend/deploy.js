@@ -1,4 +1,5 @@
-import { Keypair, Operation, rpc, TransactionBuilder, Networks, BASE_FEE, Address, xdr, scValToNative, StrKey } from "@stellar/stellar-sdk";
+/* global Buffer */
+import { Keypair, Operation, rpc, TransactionBuilder, Networks, BASE_FEE, Address, xdr, StrKey } from "@stellar/stellar-sdk";
 import fs from "fs";
 import path from "path";
 import https from "https";

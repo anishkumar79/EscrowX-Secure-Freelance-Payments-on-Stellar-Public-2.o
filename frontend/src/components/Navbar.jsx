@@ -25,7 +25,7 @@ export default function Navbar() {
     try {
       const userAddr = await connectWallet();
       setAddress(userAddr);
-    } catch (e) {
+    } catch {
       alert('Failed to connect Freighter wallet. Make sure it is installed and unlocked.');
     } finally {
       setConnecting(false);

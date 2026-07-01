@@ -80,7 +80,7 @@ async function sendSorobanTx(pair, functionName, args) {
   throw new Error(`Transaction polling timed out for ${functionName}`);
 }
 
-async function executeFullLifecycle(name, idx) {
+async function executeFullLifecycle(name) {
   const pair = Keypair.random();
   const address = pair.publicKey();
   const email = `${name.toLowerCase().replace(' ', '.')}@gmail.com`;
@@ -94,7 +94,7 @@ async function executeFullLifecycle(name, idx) {
         funded = true;
         break;
       }
-    } catch (e) {
+    } catch {
       await sleep(2000);
     }
   }
@@ -162,7 +162,7 @@ async function run() {
     let retries = 2;
     while (retries >= 0 && !success) {
       try {
-        const res = await executeFullLifecycle(name, i);
+        const res = await executeFullLifecycle(name);
         console.log(`  [COMPLETE] Completed lifecycle for ${res.name} | Escrow ID: ${res.escrowId} | Release Tx: ${res.hash}`);
         results.push(res);
         success = true;

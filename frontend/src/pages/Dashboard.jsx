@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { getConnectedAddress, getEscrowDetails, getEscrowsCount } from '../stellar';
 import { supabase } from '../supabaseClient';
 import EscrowCard from '../components/EscrowCard';
@@ -10,8 +10,6 @@ export default function Dashboard() {
   const [escrows, setEscrows] = useState([]);
   const [loading, setLoading] = useState(true);
   const [roleFilter, setRoleFilter] = useState('all'); // 'all' | 'client' | 'freelancer'
-  const navigate = useNavigate();
-
   // Sync wallet address
   useEffect(() => {
     const interval = setInterval(() => {

@@ -15,7 +15,7 @@ export default function Landing() {
       const addr = await connectWallet();
       setAddress(addr);
       navigate('/dashboard');
-    } catch (e) {
+    } catch {
       alert('Freighter connection failed. Make sure Freighter is unlocked and on Testnet.');
     } finally {
       setConnecting(false);

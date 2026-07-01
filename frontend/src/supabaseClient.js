@@ -22,7 +22,7 @@ const createMockSupabase = () => {
   return {
     from: (table) => {
       return {
-        select: (columns = '*') => {
+        select: () => {
           const data = getTableData(table);
           return {
             eq: (field, value) => {

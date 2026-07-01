@@ -31,7 +31,7 @@ async function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function fundAndTransact(name, idx) {
+async function fundAndTransact(name) {
   const pair = Keypair.random();
   const address = pair.publicKey();
   const email = `${name.toLowerCase().replace(' ', '.')}@gmail.com`;
@@ -45,7 +45,7 @@ async function fundAndTransact(name, idx) {
         funded = true;
         break;
       }
-    } catch (e) {
+    } catch {
       await sleep(2000);
     }
   }

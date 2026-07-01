@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getConnectedAddress, invokeContract, connectWallet } from '../stellar';
+import { getConnectedAddress, invokeContract } from '../stellar';
 import { supabase } from '../supabaseClient';
 import { StrKey } from '@stellar/stellar-sdk';
 import { Shield, Sparkles, Loader2, ArrowLeft } from 'lucide-react';

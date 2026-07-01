@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Calendar, User, ArrowRight, ShieldAlert } from 'lucide-react';
+import { Calendar, User, ArrowRight } from 'lucide-react';
 
 export default function EscrowCard({ escrow }) {
   const { id, title, description, amount, status, client_address, freelancer_address, release_time } = escrow;
