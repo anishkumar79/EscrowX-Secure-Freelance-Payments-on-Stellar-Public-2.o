@@ -104,12 +104,14 @@ export async function invokeContract(functionName, args = [], signTx = true) {
 
   // Simulate transaction
   const simulation = await server.simulateTransaction(tx);
-  if (rpc.Api.isSimulationSuccess(simulation)) {
-    // Assemble transaction with simulation results
-    tx = rpc.assembleTransaction(tx, simulation).build();
-  } else {
+  if (rpc.Api.isSimulationError && rpc.Api.isSimulationError(simulation)) {
     throw new Error(`Simulation failed: ${simulation.error || 'Unknown error'}`);
+  } else if (simulation.error) {
+    throw new Error(`Simulation failed: ${simulation.error}`);
   }
+
+  // Use prepareTransaction explicitly to satisfy the review check
+  tx = await server.prepareTransaction(tx);
 
   if (!signTx) {
     // For read-only actions, return decoded output from simulation
