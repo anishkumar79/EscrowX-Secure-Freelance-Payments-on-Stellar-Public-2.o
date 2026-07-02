@@ -60,7 +60,6 @@ export default function Feedback() {
 
       alert('Thank you for your feedback!');
       setComments('');
-      // eslint-disable-next-line react-hooks/set-state-in-effect
     loadFeedback();
     } catch (err) {
       console.error(err);

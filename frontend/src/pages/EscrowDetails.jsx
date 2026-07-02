@@ -137,7 +137,6 @@ export default function EscrowDetails() {
         .eq('id', Number(id));
 
       alert(`Success! On-chain action executed: ${actionName}`);
-      // eslint-disable-next-line react-hooks/set-state-in-effect
     fetchEscrow();
     } catch (err) {
       console.error(err);
