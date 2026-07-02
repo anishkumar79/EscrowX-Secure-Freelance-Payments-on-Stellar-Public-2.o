@@ -16,7 +16,7 @@ EscrowX is a decentralized, transparent, and low-cost freelance payment protecti
 
 ---
 ### 1. User Onboarding & Feedback Sheet
-We onboarded **60 real testnet users** using a Google Form feedback collection flow. The users submitted their name, email, Stellar testnet wallet address, product rating (1-5), and constructive comments. 
+We onboarded **60 real testnet users** using a Google Form feedback collection flow. The users submitted their name, email, Stellar testnet wallet address, product rating (1-10), and constructive comments. 
 - **Google Form link**: [Google Form link](https://docs.google.com/forms/d/e/1FAIpQLScm_E6aWOpLufScmXaetHzo0bTlXLB07FMqLkiSjygmhtdY9g/viewform)
 - **Exported Feedback Sheet**: [Form Response Sheet](https://docs.google.com/spreadsheets/d/1z6vxG2yMUIqfQjXD633caDrrujd6qHcG5uDVrbRyimY/edit?usp=sharing)
 - **Active Usage & Transaction Proof**: The CSV sheet includes 60 unique Stellar testnet wallet addresses and 60 unique, verified transaction hashes representing their active interactions with the smart contract.
