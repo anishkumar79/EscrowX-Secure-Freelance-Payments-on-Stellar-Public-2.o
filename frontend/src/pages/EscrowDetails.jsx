@@ -4,7 +4,7 @@ import { getConnectedAddress, invokeContract, getEscrowDetails } from '../stella
 import { supabase } from '../supabaseClient';
 import { 
   ArrowLeft, Shield, DollarSign, Send, CheckCircle2, RotateCcw, 
-  Loader2, ExternalLink, Calendar, User, Clock, AlertCircle
+  Loader2, ExternalLink, Calendar, User, Clock, AlertCircle, Copy
 } from 'lucide-react';
 
 export default function EscrowDetails() {
@@ -203,7 +203,10 @@ export default function EscrowDetails() {
 
             <div className="flex justify-between items-start gap-4">
               <div>
-                <span className="text-xs text-slate-500 font-bold uppercase tracking-wider">Escrow Agreement #{id}</span>
+                <span className="text-xs text-slate-500 font-bold uppercase tracking-wider flex items-center gap-2">
+                  Escrow Agreement #{id}
+                  <button onClick={() => {navigator.clipboard.writeText(id); alert('Escrow ID copied!');}} className="hover:text-white transition-colors" title="Copy ID"><Copy size={12}/></button>
+                </span>
                 <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-100 mt-1 mb-0">{title}</h1>
               </div>
               <div className="text-right">
@@ -225,14 +228,20 @@ export default function EscrowDetails() {
                 <span className="flex items-center gap-1.5 text-xs text-slate-500 font-bold uppercase tracking-wider">
                   <User size={12} /> Client Wallet
                 </span>
-                <span className="text-xs font-mono text-slate-300 break-all">{client_address}</span>
+                <span className="text-xs font-mono text-slate-300 break-all flex items-center gap-2">
+                  {client_address}
+                  <button onClick={() => {navigator.clipboard.writeText(client_address); alert('Client Address copied!');}} className="text-slate-500 hover:text-white transition-colors" title="Copy Address"><Copy size={12}/></button>
+                </span>
                 {isClient && <span className="text-[10px] text-purple-400 font-bold uppercase block">(You)</span>}
               </div>
               <div className="space-y-1">
                 <span className="flex items-center gap-1.5 text-xs text-slate-500 font-bold uppercase tracking-wider">
                   <User size={12} /> Freelancer Wallet
                 </span>
-                <span className="text-xs font-mono text-slate-300 break-all">{freelancer_address}</span>
+                <span className="text-xs font-mono text-slate-300 break-all flex items-center gap-2">
+                  {freelancer_address}
+                  <button onClick={() => {navigator.clipboard.writeText(freelancer_address); alert('Freelancer Address copied!');}} className="text-slate-500 hover:text-white transition-colors" title="Copy Address"><Copy size={12}/></button>
+                </span>
                 {isFreelancer && <span className="text-[10px] text-purple-400 font-bold uppercase block">(You)</span>}
               </div>
             </div>
