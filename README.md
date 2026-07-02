@@ -213,11 +213,11 @@ We analyzed the feedback collected from our users and implemented improvements t
 ### 2. Feedback Implementation Tracker
 | User ID | Name | Email | Wallet Address | Feedback Summary | Improvement Made | Git Commit ID |
 |---|---|---|---|---|---|---|
-| 1 | Anirban Dutta | anirbandutta4491@gmail.com | `GABOZJAGW6W6KATQ...` | It's hard to share the escrow ID or copy the client/freelancer wallet addresses. Please add a copy button. | Added copy-to-clipboard functionality for Escrow ID and Wallet Addresses | [ecd2ee4](https://github.com/anishkumar79/level5/commit/ecd2ee4) |
-| 2 | Subhashis Roy | subhashisroy15@gmail.com | `GCWEERT4DN6UZIJZ...` | I have too many escrows on my dashboard. I need a way to filter the active ones from the completed ones. | Added a Status Filter on Dashboard (Pending, Completed, Refunded) | [3b70ec3](https://github.com/anishkumar79/level5/commit/3b70ec3) |
-| 3 | Debalina Sen | debalinasen51@gmail.com | `GAROEYXEPBGDROSW...` | I want to see my XLM balance in the app before I try to deposit funds to make sure I have enough. | Displayed connected user XLM balance directly in Navbar | [dd057d6](https://github.com/anishkumar79/level5/commit/dd057d6) |
-| 4 | Joydeep Banerjee | joydeepbanerjee59@gmail.com | `GDSCFJKJSLE24542...` | I don't know if the transaction was successful or what the hash is, please add a link to the explorer. | Added Transaction Hash Explorer Link in Escrow Details | [8f13cb6](https://github.com/anishkumar79/level5/commit/8f13cb6) |
-| 5 | Priyanka Das | priyankadas68@gmail.com | `GCV7IKRKVIGKB32D...` | I have to reload the page to see if my escrow status changed on the blockchain. A refresh button would be nice. | Added manual Refresh Button for Escrows List on Dashboard | [bc32db9](https://github.com/anishkumar79/level5/commit/bc32db9) |
+| 1 | Anirban Dutta | anirbandutta4491@gmail.com | `GABOZJAGW6W6KATQ...` | It's hard to share the escrow ID or copy the client/freelancer wallet addresses. Please add a copy button. | Added copy-to-clipboard functionality for Escrow ID and Wallet Addresses | [ecd2ee4](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/ecd2ee4) |
+| 2 | Subhashis Roy | subhashisroy15@gmail.com | `GCWEERT4DN6UZIJZ...` | I have too many escrows on my dashboard. I need a way to filter the active ones from the completed ones. | Added a Status Filter on Dashboard (Pending, Completed, Refunded) | [3b70ec3](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/3b70ec3) |
+| 3 | Debalina Sen | debalinasen51@gmail.com | `GAROEYXEPBGDROSW...` | I want to see my XLM balance in the app before I try to deposit funds to make sure I have enough. | Displayed connected user XLM balance directly in Navbar | [dd057d6](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/dd057d6) |
+| 4 | Joydeep Banerjee | joydeepbanerjee59@gmail.com | `GDSCFJKJSLE24542...` | I don't know if the transaction was successful or what the hash is, please add a link to the explorer. | Added Transaction Hash Explorer Link in Escrow Details | [8f13cb6](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/8f13cb6) |
+| 5 | Priyanka Das | priyankadas68@gmail.com | `GCV7IKRKVIGKB32D...` | I have to reload the page to see if my escrow status changed on the blockchain. A refresh button would be nice. | Added manual Refresh Button for Escrows List on Dashboard | [bc32db9](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/bc32db9) |
 
 ---
 
@@ -229,9 +229,9 @@ Based on user feedback, we plan to implement the following upgrades in the upcom
 - **Problem**: XLM price volatility between lock and release poses exchange rate risk for freelancers.
 - **Plan**: Update the Soroban smart contract to accept Stellar Asset Contract (SAC) tokens representing USDC and EURC stablecoins. The contract will hold stable value throughout the contract life.
 - **Status**: UI mockup toggling is prepared in [CreateEscrow.jsx](file:///c:/Users/91754/Desktop/level5/frontend/src/pages/CreateEscrow.jsx#L167-L171).
-- **Git Commit Link**: [Commit: Add Google Form user feedback spreadsheet](https://github.com/anishkumar79/level5/commit/2cb43d0)
+- **Git Commit Link**: [Commit: Add Google Form user feedback spreadsheet](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/2cb43d0)
 
 ### 2. Multi-Signature & Dispute Resolution Arbitrators
 - **Problem**: If a client refuses to approve release, or a freelancer does not complete work, funds remain locked indefinitely.
 - **Plan**: Implement a 2-of-3 multi-signature consensus where a list of trusted third-party arbitrators can resolve disputes and sign the payout or refund transaction.
-- **Git Commit Link**: [Commit: Update README documentation for Level 5 submission requirements](https://github.com/anishkumar79/level5/commit/73d3d33)
+- **Git Commit Link**: [Commit: Update README documentation for Level 5 submission requirements](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/73d3d33)
