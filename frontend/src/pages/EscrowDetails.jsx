@@ -208,6 +208,11 @@ export default function EscrowDetails() {
                   <button onClick={() => {navigator.clipboard.writeText(id); alert('Escrow ID copied!');}} className="hover:text-white transition-colors" title="Copy ID"><Copy size={12}/></button>
                 </span>
                 <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-100 mt-1 mb-0">{title}</h1>
+                {tx_hash && (
+                  <a href={`https://stellar.expert/explorer/testnet/tx/${tx_hash}`} target="_blank" rel="noreferrer" className="flex items-center gap-1 text-xs text-purple-400 hover:text-purple-300 mt-2 font-medium">
+                    <ExternalLink size={12} /> View on StellarExpert
+                  </a>
+                )}
               </div>
               <div className="text-right">
                 <span className="text-xs text-slate-500 font-bold block uppercase tracking-wider">Amount</span>
