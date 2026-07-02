@@ -10,6 +10,7 @@ export default function Dashboard() {
   const [escrows, setEscrows] = useState([]);
   const [loading, setLoading] = useState(true);
   const [roleFilter, setRoleFilter] = useState('all'); // 'all' | 'client' | 'freelancer'
+  const [statusFilter, setStatusFilter] = useState('all'); // 'all' | 'pending' | 'completed' | 'refunded'
   // Sync wallet address
   useEffect(() => {
     const interval = setInterval(() => {
@@ -126,16 +127,26 @@ export default function Dashboard() {
 
   // Filter agreements
   const filteredEscrows = escrows.filter(item => {
+    let roleMatch = false;
     if (roleFilter === 'client') {
-      return item.client_address.toLowerCase() === address.toLowerCase();
+      roleMatch = item.client_address.toLowerCase() === address.toLowerCase();
+    } else if (roleFilter === 'freelancer') {
+      roleMatch = item.freelancer_address.toLowerCase() === address.toLowerCase();
+    } else {
+      roleMatch = item.client_address.toLowerCase() === address.toLowerCase() ||
+                  item.freelancer_address.toLowerCase() === address.toLowerCase();
     }
-    if (roleFilter === 'freelancer') {
-      return item.freelancer_address.toLowerCase() === address.toLowerCase();
+
+    let statusMatch = true;
+    if (statusFilter === 'pending') {
+      statusMatch = item.status === 0 || item.status === 1 || item.status === 2;
+    } else if (statusFilter === 'completed') {
+      statusMatch = item.status === 3;
+    } else if (statusFilter === 'refunded') {
+      statusMatch = item.status === 4;
     }
-    return (
-      item.client_address.toLowerCase() === address.toLowerCase() ||
-      item.freelancer_address.toLowerCase() === address.toLowerCase()
-    );
+
+    return roleMatch && statusMatch;
   });
 
   // Calculate statistics
@@ -199,25 +210,41 @@ export default function Dashboard() {
       </div>
 
       {/* Filtering Options */}
-      <div className="flex border-b border-white/5 gap-6 text-sm font-semibold">
-        <button
-          onClick={() => setRoleFilter('all')}
-          className={`pb-4 transition-all duration-200 border-b-2 cursor-pointer ${roleFilter === 'all' ? 'border-purple-500 text-purple-400' : 'border-transparent text-slate-400 hover:text-slate-200'}`}
-        >
-          All Agreements
-        </button>
-        <button
-          onClick={() => setRoleFilter('client')}
-          className={`pb-4 transition-all duration-200 border-b-2 cursor-pointer ${roleFilter === 'client' ? 'border-purple-500 text-purple-400' : 'border-transparent text-slate-400 hover:text-slate-200'}`}
-        >
-          As Client
-        </button>
-        <button
-          onClick={() => setRoleFilter('freelancer')}
-          className={`pb-4 transition-all duration-200 border-b-2 cursor-pointer ${roleFilter === 'freelancer' ? 'border-purple-500 text-purple-400' : 'border-transparent text-slate-400 hover:text-slate-200'}`}
-        >
-          As Freelancer
-        </button>
+      <div className="flex flex-col sm:flex-row justify-between border-b border-white/5 gap-6 sm:gap-0">
+        <div className="flex gap-6 text-sm font-semibold">
+          <button
+            onClick={() => setRoleFilter('all')}
+            className={`pb-4 transition-all duration-200 border-b-2 cursor-pointer ${roleFilter === 'all' ? 'border-purple-500 text-purple-400' : 'border-transparent text-slate-400 hover:text-slate-200'}`}
+          >
+            All Agreements
+          </button>
+          <button
+            onClick={() => setRoleFilter('client')}
+            className={`pb-4 transition-all duration-200 border-b-2 cursor-pointer ${roleFilter === 'client' ? 'border-purple-500 text-purple-400' : 'border-transparent text-slate-400 hover:text-slate-200'}`}
+          >
+            As Client
+          </button>
+          <button
+            onClick={() => setRoleFilter('freelancer')}
+            className={`pb-4 transition-all duration-200 border-b-2 cursor-pointer ${roleFilter === 'freelancer' ? 'border-purple-500 text-purple-400' : 'border-transparent text-slate-400 hover:text-slate-200'}`}
+          >
+            As Freelancer
+          </button>
+        </div>
+        
+        <div className="flex gap-4 text-xs font-semibold mb-4 sm:mb-0">
+          <span className="text-slate-500 self-center uppercase tracking-wider">Status:</span>
+          <select 
+            value={statusFilter}
+            onChange={(e) => setStatusFilter(e.target.value)}
+            className="bg-slate-900 border border-white/10 rounded-lg px-3 py-1.5 text-slate-300 focus:outline-none focus:border-purple-500/50"
+          >
+            <option value="all">All</option>
+            <option value="pending">Pending</option>
+            <option value="completed">Completed</option>
+            <option value="refunded">Refunded</option>
+          </select>
+        </div>
       </div>
 
       {/* Escrow List Grid */}
