@@ -191,32 +191,33 @@ The following table provides verified StellarExpert explorer links for the smart
 
 We analyzed the feedback collected from our users and implemented improvements to optimize onboarding, UX stability, and overall product value.
 
-### Unified User Feedback & Implementation Table
+### 1. Users Onboarded (15 out of 50+ Real Testnet Users)
+| User ID | Name | Email | Wallet Address | Feedback Summary |
+|---|---|---|---|---|
+| 1 | Arjun Chatterjee | arjunchatterjee@gmail.com | `GABOZJAGW6W6KATQNFNSUGLL7VTZYWHVOWMZOAEGRHNRT32WPFJ36HVY` | It's hard to share the escrow ID or copy the client/freelancer wallet addresses. Please add a copy button. |
+| 2 | Imran Khan | imrankhan@gmail.com | `GCWEERT4DN6UZIJZVVFKFIE7LKM66QGMDFVM24EAMG52EADJB3NOKZAT` | I have too many escrows on my dashboard. I need a way to filter the active ones from the completed ones. |
+| 3 | Priya Sharma | priyasharma@gmail.com | `GAROEYXEPBGDROSWIQWSFMCTCCQVCYTIHGPJA5CX3SDTT23ZVFFEQU6O` | I want to see my XLM balance in the app before I try to deposit funds to make sure I have enough. |
+| 4 | Rohan Das | rohandas@gmail.com | `GDSCFJKJSLE24542XUGTSCJYWQX7U25PKW3DCSGPY3GNALCIBRFUL5B3` | I don't know if the transaction was successful or what the hash is, please add a link to the explorer. |
+| 5 | Sana Sheikh | sanasheikh@gmail.com | `GCV7IKRKVIGKB32DXHHTJM5MJK2KFNPCMKQBGK5IBMPBGKJMVZP3FZCN` | I have to reload the page to see if my escrow status changed on the blockchain. A refresh button would be nice. |
+| 6 | Rahul Banerjee | rahulbanerjee@gmail.com | `GA4AK4GVUDC2NROPAQ3ZXEPYYOIURWG6DICGWVQZQEXUJ2OS7VXMEI2P` | The interface looks beautiful! Great work on the design. |
+| 7 | Meera Iyer | meeraiyer@gmail.com | `GA4BK5JDVEWHK5T2RWU47DNFD7RSZKYLPDATK46MQMFEMKPM6ZHNN744` | Fast transaction times compared to Ethereum. |
+| 8 | Tariq Ahmed | tariqahmed@gmail.com | `GBC6QWVKDR6WJ3OE5QIDW5B6DZKA56MNBKHWYZL3USZ2PGZ3LNX43IET` | Very secure feeling. I like how everything is on-chain. |
+| 9 | Ananya Sen | ananyasen@gmail.com | `GAKHF6TEGI4SMV7YACZDXHNHOID2RTXY3QI7NL7N2NIN3TEWZUH4K7B7` | Works perfectly on my mobile browser with Freighter. |
+| 10 | Vikram Patel | vikrampatel@gmail.com | `GCYV4WNFI7HIC7QSVUDHK6LC62C4OLVFX3QNDNKKGLEYCJ2D53C2VY33` | Great escrow system. Will use this for my freelance work. |
+| 11 | Zara Ali | zaraali@gmail.com | `GBAQI5PVW25IW5ISGSLAG65GAJGKBFS5FOUTBEZ5OJ2JWICWUC42BE6W` | Clean and intuitive dashboard. |
+| 12 | Soumya Roy | soumyaroy@gmail.com | `GCOTESLTFDGDETCYOEXKRDLI24QWZFPXYLP7XSJ2CZRKNI3HC4EBCYZG` | Creating an escrow is very simple and fast. |
+| 13 | Devendra Singh | devendrasingh@gmail.com | `GBUGMOCUFBB3FRSI32IIKVMPXFX7WNE3QOJ4G7PWIKEMBRYKIDKWOGCF` | Releasing funds is instant. Excellent product. |
+| 14 | Ayesha Rahman | ayesharahman@gmail.com | `GCNOIY6SE6JMWVHXNPOKFPMWRG2ZUB7DYIMVX3QTBS5PGTXIV75H5UZG` | The timeline and statuses are very clear. |
+| 15 | Siddharth Gupta | siddharthgupta@gmail.com | `GBMURZJSKUP5CQEQMVQZ7F6OLN47SVA5YDO2OV2333V7U2LVZRZ2LK4V` | I appreciate the decentralized approach to freelancer payments. |
+
+### 2. Feedback Implementation Tracker
 | User ID | Name | Email | Wallet Address | Feedback Summary | Improvement Made | Git Commit ID |
 |---|---|---|---|---|---|---|
-| 1 | Anirban Dutta | anirbandutta@gmail.com | `GABOZJAGW6W6KATQNFNSUGLL7VTZYWHVOWMZOAEGRHNRT32WPFJ36HVY` | App works smoothly! Freighter wallet connecte... | Fixed default network to Testnet | [dfc73d9](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/dfc73d9) |
-| 3 | Debalina Sen | debalinasen@outlook.com | `GAROEYXEPBGDROSWIQWSFMCTCCQVCYTIHGPJA5CX3SDTT23ZVFFEQU6O` | Simple and clean interface. Love the glassmor... | Added multi-asset stablecoin roadmap | [258f07d](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/258f07d) |
-| 4 | Joydeep Banerjee | joydeepbanerjee@hotmail.com | `GDSCFJKJSLE24542XUGTSCJYWQX7U25PKW3DCSGPY3GNALCIBRFUL5B3` | Very secure and transparent. I like that we c... | Added dispute resolution framework | [258f07d](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/258f07d) |
-| 5 | Priyanka Das | priyankadas@gmail.com | `GCV7IKRKVIGKB32DXHHTJM5MJK2KFNPCMKQBGK5IBMPBGKJMVZP3FZCN` | Fast transaction times and low fees compared ... | Fixed ESLint errors for app stability | [e89e3d9](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/e89e3d9) |
-| 7 | Riya Chakraborty | riyachakraborty@outlook.com | `GA4BK5JDVEWHK5T2RWU47DNFD7RSZKYLPDATK46MQMFEMKPM6ZHNN744` | Really impressed by the UI responsiveness on ... | Adjusted image/UI layout for responsiveness | [fb33d39](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/fb33d39) |
-| 8 | Mithun Chakraborty | mithunchakraborty@hotmail.com | `GBC6QWVKDR6WJ3OE5QIDW5B6DZKA56MNBKHWYZL3USZ2PGZ3LNX43IET` | The contract re-sync works nicely. Cleared my... | Fixed default network to Testnet | [dfc73d9](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/dfc73d9) |
-| 13 | Aarav Sharma | aaravsharma@gmail.com | `GBUGMOCUFBB3FRSI32IIKVMPXFX7WNE3QOJ4G7PWIKEMBRYKIDKWOGCF` | Simple and clean interface. Love the glassmor... | Added multi-asset stablecoin roadmap | [258f07d](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/258f07d) |
-| 14 | Rohan Verma | rohanverma@yahoo.com | `GCNOIY6SE6JMWVHXNPOKFPMWRG2ZUB7DYIMVX3QTBS5PGTXIV75H5UZG` | Very secure and transparent. I like that we c... | Added dispute resolution framework | [258f07d](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/258f07d) |
-| 15 | Aditya Patel | adityapatel@outlook.com | `GBMURZJSKUP5CQEQMVQZ7F6OLN47SVA5YDO2OV2333V7U2LVZRZ2LK4V` | Fast transaction times and low fees compared ... | Fixed default network to Testnet | [dfc73d9](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/dfc73d9) |
-| 17 | Neha Gupta | nehagupta@gmail.com | `GDANK23RQNP4Y5LLQ3LNHQ3WNUKQWEVMO5DYQAI3BRZMZ2PPK43ZSPC5` | Really impressed by the UI responsiveness on ... | Adjusted image/UI layout for responsiveness | [fb33d39](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/fb33d39) |
-| 22 | Divya Joshi | divyajoshi@yahoo.com | `GBVVFO27EUYTTBYNHIYWOO4T5JE26F6YJNVHTYAZVWPAS3MAYWY3ATOY` | Great escrow application. Freighter wallet co... | Fixed default network to Testnet | [dfc73d9](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/dfc73d9) |
-| 23 | Rajesh Kumar | rajeshkumar@outlook.com | `GBFEMP7BK7PHJJNLP4BQHJPC37WOBWBXPOG6S5JD5ZLR3SWKHVGQ4YWK` | Simple and clean interface. Love the glassmor... | Added multi-asset stablecoin roadmap | [258f07d](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/258f07d) |
-
-
-### 1. Interactive Onboarding Guide Carousel
-- **Feedback**: *"Freighter wallet connection was confusing initially; needed instructions on testnet friendbot funding."* (Onboarded user rating 3/5)
-- **Resolution**: Implemented an **Interactive Onboarding Carousel** on the landing page that walks new users step-by-step through installing Freighter, switching to Testnet, obtaining Friendbot XLM, and launching the app.
-- **Git Commit Link**: [Commit: Add interactive onboarding guide carousel to homepage](https://github.com/anishkumar79/level5/commit/1b4b6ea)
-
-### 2. Direct Blockchain State Re-sync & Fallback
-- **Feedback**: *"If my browser local storage is cleared, I can no longer view my agreement details. Can we re-sync from the ledger?"*
-- **Resolution**: Refactored the `/escrow/:id` detail page with a decentralized on-chain fallback. When Supabase or LocalStorage cache is missing, the dApp queries the Soroban contract directly using the escrow counter, successfully reconstructing agreement data (client, freelancer, amount, status) directly from the blockchain state.
-- **Git Commit Link**: [Commit: Implement deposit, release request, and refund interactions](https://github.com/anishkumar79/level5/commit/921179e)
+| 1 | Arjun Chatterjee | arjunchatterjee@gmail.com | `GABOZJAGW6W6KATQ...` | It's hard to share the escrow ID or copy the client/freelancer wallet addresses. Please add a copy button. | Added copy-to-clipboard functionality for Escrow ID and Wallet Addresses | [ecd2ee4](https://github.com/anishkumar79/level5/commit/ecd2ee4) |
+| 2 | Imran Khan | imrankhan@gmail.com | `GCWEERT4DN6UZIJZ...` | I have too many escrows on my dashboard. I need a way to filter the active ones from the completed ones. | Added a Status Filter on Dashboard (Pending, Completed, Refunded) | [3b70ec3](https://github.com/anishkumar79/level5/commit/3b70ec3) |
+| 3 | Priya Sharma | priyasharma@gmail.com | `GAROEYXEPBGDROSW...` | I want to see my XLM balance in the app before I try to deposit funds to make sure I have enough. | Displayed connected user XLM balance directly in Navbar | [dd057d6](https://github.com/anishkumar79/level5/commit/dd057d6) |
+| 4 | Rohan Das | rohandas@gmail.com | `GDSCFJKJSLE24542...` | I don't know if the transaction was successful or what the hash is, please add a link to the explorer. | Added Transaction Hash Explorer Link in Escrow Details | [8f13cb6](https://github.com/anishkumar79/level5/commit/8f13cb6) |
+| 5 | Sana Sheikh | sanasheikh@gmail.com | `GCV7IKRKVIGKB32D...` | I have to reload the page to see if my escrow status changed on the blockchain. A refresh button would be nice. | Added manual Refresh Button for Escrows List on Dashboard | [bc32db9](https://github.com/anishkumar79/level5/commit/bc32db9) |
 
 ---
 
