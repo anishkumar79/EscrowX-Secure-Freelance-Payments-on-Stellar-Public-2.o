@@ -18,6 +18,17 @@ EscrowX is a decentralized, transparent, and low-cost freelance payment protecti
 
 ## 🔵 Level 5 - Blue Belt Submission Requirements
 
+### ✅ Submission Checklist
+- [x] Public GitHub repository
+- [x] Minimum 20+ meaningful commits
+- [x] Live deployed application
+- [x] PPT/Pitch deck link
+- [x] Demo video link
+- [x] Proof of 50+ users
+- [x] Screenshots of analytics or transaction activity
+- [x] Updated README and documentation
+- [x] User feedback iteration summary
+
 ### 1. User Onboarding & Feedback Sheet
 We onboarded **60 real testnet users** using a Google Form feedback collection flow. The users submitted their name, email, Stellar testnet wallet address, product rating (1-5), and constructive comments. 
 - **Google Form link**: [Google Form link](https://docs.google.com/forms/d/e/1FAIpQLScm_E6aWOpLufScmXaetHzo0bTlXLB07FMqLkiSjygmhtdY9g/viewform)
@@ -95,10 +106,12 @@ escrowx/
 ## Product UI & Screenshots
 
 <p align="center">
-  <img src="screenshots/50+_user_proof.png" width="24%" />
-  <img src="screenshots/analytics.png" width="24%" />
-  <img src="screenshots/responsive_mobile_tab.png" width="24%" />
-  <img src="screenshots/sucess_verification.png" width="24%" />
+  <img src="screenshots/50+_user_proof.png" width="48%" />
+  <img src="screenshots/analytics.png" width="48%" />
+</p>
+<p align="center">
+  <img src="screenshots/responsive_mobile_tab.png" width="48%" />
+  <img src="screenshots/sucess_verification.png" width="48%" />
 </p>
 
 ---
