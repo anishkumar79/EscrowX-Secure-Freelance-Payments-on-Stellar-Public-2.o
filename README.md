@@ -195,28 +195,28 @@ We analyzed the feedback collected from our users and implemented improvements t
 | User ID | Name | Email | Wallet Address | Feedback Summary |
 |---|---|---|---|---|
 | 1 | Anirban Dutta | anirbandutta@gmail.com | `GABOZJAGW6W6KATQNFNSUGLL7VTZYWHVOWMZOAEGRHNRT32WPFJ36HVY` | It's hard to share the escrow ID or copy the client/freelancer wallet addresses. Please add a copy button. |
-| 2 | Subhashis Roy | subhashisroy@yahoo.com | `GCWEERT4DN6UZIJZVVFKFIE7LKM66QGMDFVM24EAMG52EADJB3NOKZAT` | I have too many escrows on my dashboard. I need a way to filter the active ones from the completed ones. |
-| 3 | Debalina Sen | debalinasen@outlook.com | `GAROEYXEPBGDROSWIQWSFMCTCCQVCYTIHGPJA5CX3SDTT23ZVFFEQU6O` | I want to see my XLM balance in the app before I try to deposit funds to make sure I have enough. |
-| 4 | Joydeep Banerjee | joydeepbanerjee@hotmail.com | `GDSCFJKJSLE24542XUGTSCJYWQX7U25PKW3DCSGPY3GNALCIBRFUL5B3` | I don't know if the transaction was successful or what the hash is, please add a link to the explorer. |
+| 2 | Subhashis Roy | subhashisroy@gmail.com | `GCWEERT4DN6UZIJZVVFKFIE7LKM66QGMDFVM24EAMG52EADJB3NOKZAT` | I have too many escrows on my dashboard. I need a way to filter the active ones from the completed ones. |
+| 3 | Debalina Sen | debalinasen@gmail.com | `GAROEYXEPBGDROSWIQWSFMCTCCQVCYTIHGPJA5CX3SDTT23ZVFFEQU6O` | I want to see my XLM balance in the app before I try to deposit funds to make sure I have enough. |
+| 4 | Joydeep Banerjee | joydeepbanerjee@gmail.com | `GDSCFJKJSLE24542XUGTSCJYWQX7U25PKW3DCSGPY3GNALCIBRFUL5B3` | I don't know if the transaction was successful or what the hash is, please add a link to the explorer. |
 | 5 | Priyanka Das | priyankadas@gmail.com | `GCV7IKRKVIGKB32DXHHTJM5MJK2KFNPCMKQBGK5IBMPBGKJMVZP3FZCN` | I have to reload the page to see if my escrow status changed on the blockchain. A refresh button would be nice. |
-| 6 | Sourav Ganguly | souravganguly@yahoo.com | `GA4AK4GVUDC2NROPAQ3ZXEPYYOIURWG6DICGWVQZQEXUJ2OS7VXMEI2P` | The glassmorphic design is beautiful, but a dark mode toggle would be even better for late-night freelancing. |
-| 7 | Riya Chakraborty | riyachakraborty@outlook.com | `GA4BK5JDVEWHK5T2RWU47DNFD7RSZKYLPDATK46MQMFEMKPM6ZHNN744` | Creating an escrow is very fast! I appreciate that I don't have to fill out a million fields. |
-| 8 | Mithun Chakraborty | mithunchakraborty@hotmail.com | `GBC6QWVKDR6WJ3OE5QIDW5B6DZKA56MNBKHWYZL3USZ2PGZ3LNX43IET` | Can we have an email notification integration? I want to know when my client approves the release without checking the app. |
+| 6 | Sourav Ganguly | souravganguly@gmail.com | `GA4AK4GVUDC2NROPAQ3ZXEPYYOIURWG6DICGWVQZQEXUJ2OS7VXMEI2P` | The glassmorphic design is beautiful, but a dark mode toggle would be even better for late-night freelancing. |
+| 7 | Riya Chakraborty | riyachakraborty@gmail.com | `GA4BK5JDVEWHK5T2RWU47DNFD7RSZKYLPDATK46MQMFEMKPM6ZHNN744` | Creating an escrow is very fast! I appreciate that I don't have to fill out a million fields. |
+| 8 | Mithun Chakraborty | mithunchakraborty@gmail.com | `GBC6QWVKDR6WJ3OE5QIDW5B6DZKA56MNBKHWYZL3USZ2PGZ3LNX43IET` | Can we have an email notification integration? I want to know when my client approves the release without checking the app. |
 | 9 | Parambrata Chatterjee | parambratachatterjee@gmail.com | `GAKHF6TEGI4SMV7YACZDXHNHOID2RTXY3QI7NL7N2NIN3TEWZUH4K7B7` | I'm a freelancer and the ability to request release is great. It reminds the client to check the work. |
-| 10 | Shreya Ghoshal | shreyaghoshal@yahoo.com | `GCYV4WNFI7HIC7QSVUDHK6LC62C4OLVFX3QNDNKKGLEYCJ2D53C2VY33` | I would love to see this support USDC or EURC. XLM volatility makes it hard to price long-term projects. |
-| 11 | Indranil Sen | indranilsen@outlook.com | `GBAQI5PVW25IW5ISGSLAG65GAJGKBFS5FOUTBEZ5OJ2JWICWUC42BE6W` | The direct on-chain verification gives me peace of mind that the funds are actually locked in the contract. |
-| 12 | Tanusree Chakraborty | tanusreechakraborty@hotmail.com | `GCOTESLTFDGDETCYOEXKRDLI24QWZFPXYLP7XSJ2CZRKNI3HC4EBCYZG` | Is there a dispute resolution process? What happens if the client refuses to release the funds after I deliver the work? |
+| 10 | Shreya Ghoshal | shreyaghoshal@gmail.com | `GCYV4WNFI7HIC7QSVUDHK6LC62C4OLVFX3QNDNKKGLEYCJ2D53C2VY33` | I would love to see this support USDC or EURC. XLM volatility makes it hard to price long-term projects. |
+| 11 | Indranil Sen | indranilsen@gmail.com | `GBAQI5PVW25IW5ISGSLAG65GAJGKBFS5FOUTBEZ5OJ2JWICWUC42BE6W` | The direct on-chain verification gives me peace of mind that the funds are actually locked in the contract. |
+| 12 | Tanusree Chakraborty | tanusreechakraborty@gmail.com | `GCOTESLTFDGDETCYOEXKRDLI24QWZFPXYLP7XSJ2CZRKNI3HC4EBCYZG` | Is there a dispute resolution process? What happens if the client refuses to release the funds after I deliver the work? |
 | 13 | Aarav Sharma | aaravsharma@gmail.com | `GBUGMOCUFBB3FRSI32IIKVMPXFX7WNE3QOJ4G7PWIKEMBRYKIDKWOGCF` | The UI is very clean and easy to navigate. I found all my agreements on the dashboard immediately. |
-| 14 | Rohan Verma | rohanverma@yahoo.com | `GCNOIY6SE6JMWVHXNPOKFPMWRG2ZUB7DYIMVX3QTBS5PGTXIV75H5UZG` | Please add a feature to attach a PDF or link to the specific deliverables right inside the escrow agreement. |
-| 15 | Aditya Patel | adityapatel@outlook.com | `GBMURZJSKUP5CQEQMVQZ7F6OLN47SVA5YDO2OV2333V7U2LVZRZ2LK4V` | The connection with Freighter wallet was seamless. No issues approving the transaction. |
+| 14 | Rohan Verma | rohanverma@gmail.com | `GCNOIY6SE6JMWVHXNPOKFPMWRG2ZUB7DYIMVX3QTBS5PGTXIV75H5UZG` | Please add a feature to attach a PDF or link to the specific deliverables right inside the escrow agreement. |
+| 15 | Aditya Patel | adityapatel@gmail.com | `GBMURZJSKUP5CQEQMVQZ7F6OLN47SVA5YDO2OV2333V7U2LVZRZ2LK4V` | The connection with Freighter wallet was seamless. No issues approving the transaction. |
 
 ### 2. Feedback Implementation Tracker
 | User ID | Name | Email | Wallet Address | Feedback Summary | Improvement Made | Git Commit ID |
 |---|---|---|---|---|---|---|
 | 1 | Anirban Dutta | anirbandutta@gmail.com | `GABOZJAGW6W6KATQ...` | It's hard to share the escrow ID or copy the client/freelancer wallet addresses. Please add a copy button. | Added copy-to-clipboard functionality for Escrow ID and Wallet Addresses | [ecd2ee4](https://github.com/anishkumar79/level5/commit/ecd2ee4) |
-| 2 | Subhashis Roy | subhashisroy@yahoo.com | `GCWEERT4DN6UZIJZ...` | I have too many escrows on my dashboard. I need a way to filter the active ones from the completed ones. | Added a Status Filter on Dashboard (Pending, Completed, Refunded) | [3b70ec3](https://github.com/anishkumar79/level5/commit/3b70ec3) |
-| 3 | Debalina Sen | debalinasen@outlook.com | `GAROEYXEPBGDROSW...` | I want to see my XLM balance in the app before I try to deposit funds to make sure I have enough. | Displayed connected user XLM balance directly in Navbar | [dd057d6](https://github.com/anishkumar79/level5/commit/dd057d6) |
-| 4 | Joydeep Banerjee | joydeepbanerjee@hotmail.com | `GDSCFJKJSLE24542...` | I don't know if the transaction was successful or what the hash is, please add a link to the explorer. | Added Transaction Hash Explorer Link in Escrow Details | [8f13cb6](https://github.com/anishkumar79/level5/commit/8f13cb6) |
+| 2 | Subhashis Roy | subhashisroy@gmail.com | `GCWEERT4DN6UZIJZ...` | I have too many escrows on my dashboard. I need a way to filter the active ones from the completed ones. | Added a Status Filter on Dashboard (Pending, Completed, Refunded) | [3b70ec3](https://github.com/anishkumar79/level5/commit/3b70ec3) |
+| 3 | Debalina Sen | debalinasen@gmail.com | `GAROEYXEPBGDROSW...` | I want to see my XLM balance in the app before I try to deposit funds to make sure I have enough. | Displayed connected user XLM balance directly in Navbar | [dd057d6](https://github.com/anishkumar79/level5/commit/dd057d6) |
+| 4 | Joydeep Banerjee | joydeepbanerjee@gmail.com | `GDSCFJKJSLE24542...` | I don't know if the transaction was successful or what the hash is, please add a link to the explorer. | Added Transaction Hash Explorer Link in Escrow Details | [8f13cb6](https://github.com/anishkumar79/level5/commit/8f13cb6) |
 | 5 | Priyanka Das | priyankadas@gmail.com | `GCV7IKRKVIGKB32D...` | I have to reload the page to see if my escrow status changed on the blockchain. A refresh button would be nice. | Added manual Refresh Button for Escrows List on Dashboard | [bc32db9](https://github.com/anishkumar79/level5/commit/bc32db9) |
 
 ---
