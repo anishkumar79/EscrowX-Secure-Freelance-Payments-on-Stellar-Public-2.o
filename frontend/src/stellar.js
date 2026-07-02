@@ -181,3 +181,17 @@ export async function getEscrowsCount() {
     return 0;
   }
 }
+
+/**
+ * Get native XLM balance of an account.
+ */
+export async function getXLMBalance(accountAddress) {
+  try {
+    const account = await server.getAccount(accountAddress);
+    const nativeBalance = account.balances.find(b => b.asset_type === 'native');
+    return nativeBalance ? nativeBalance.balance : '0.00';
+  } catch (error) {
+    console.error('Error fetching XLM balance:', error);
+    return '0.00';
+  }
+}

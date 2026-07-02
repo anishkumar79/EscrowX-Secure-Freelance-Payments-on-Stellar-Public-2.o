@@ -1,21 +1,26 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { connectWallet, disconnectWallet, getConnectedAddress } from '../stellar';
-import { Wallet, LogOut, CheckCircle, Shield } from 'lucide-react';
+import { connectWallet, disconnectWallet, getConnectedAddress, getXLMBalance } from '../stellar';
+import { Wallet, LogOut, CheckCircle, Shield, Coins } from 'lucide-react';
 
 export default function Navbar() {
   const [address, setAddress] = useState(getConnectedAddress());
+  const [balance, setBalance] = useState('0.00');
   const [connecting, setConnecting] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     // Poll to keep wallet state synced
-    const interval = setInterval(() => {
+    const interval = setInterval(async () => {
       const current = getConnectedAddress();
       if (current !== address) {
         setAddress(current);
       }
-    }, 1000);
+      if (current) {
+        const bal = await getXLMBalance(current);
+        setBalance(bal);
+      }
+    }, 2000);
     return () => clearInterval(interval);
   }, [address]);
 
@@ -65,6 +70,10 @@ export default function Navbar() {
       <div className="flex items-center gap-3">
         {address ? (
           <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 bg-slate-900/80 border border-purple-500/20 text-purple-300 px-3 py-2 rounded-xl text-sm font-semibold shadow-inner mr-2">
+              <Coins size={14} className="text-purple-400" />
+              <span>{parseFloat(balance).toFixed(2)} XLM</span>
+            </div>
             <div className="flex items-center gap-2 bg-slate-900/80 border border-emerald-500/20 text-emerald-400 px-4 py-2 rounded-xl text-sm font-semibold shadow-inner">
               <CheckCircle size={16} />
               <span>{shortAddress(address)}</span>
