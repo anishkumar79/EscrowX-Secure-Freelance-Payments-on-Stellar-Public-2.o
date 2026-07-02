@@ -23,7 +23,6 @@ export default function Dashboard() {
   }, [address]);
 
   // Load escrows
-  useEffect(() => {
   const loadData = async () => {
     if (!address) {
       setLoading(false);
