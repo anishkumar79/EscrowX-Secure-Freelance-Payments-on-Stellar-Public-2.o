@@ -35,27 +35,6 @@ We onboarded **60 real testnet users** using a Google Form feedback collection f
 - **Exported Feedback Sheet**: [Download User Onboarding Feedback (Excel CSV)](user_feedback_responses.csv)
 - **Active Usage & Transaction Proof**: The CSV sheet includes 60 unique Stellar testnet wallet addresses and 60 unique, verified transaction hashes representing their active interactions with the smart contract.
 
-### Users Onboarded (Sample of 15 Users)
-| User ID | Name | Email | Wallet Address | Feedback Summary |
-|---|---|---|---|---|
-| 1 | Anirban Dutta | anirbandutta@gmail.com | `GABOZJAGW6W6KATQNFNSUGLL7VTZYWHVOWMZOAEGRHNRT32WPFJ36HVY` | App works smoothly! Freighter wallet connected ins... |
-| 2 | Subhashis Roy | subhashisroy@yahoo.com | `GCWEERT4DN6UZIJZVVFKFIE7LKM66QGMDFVM24EAMG52EADJB3NOKZAT` | Great escrow application. Freighter wallet connect... |
-| 3 | Debalina Sen | debalinasen@outlook.com | `GAROEYXEPBGDROSWIQWSFMCTCCQVCYTIHGPJA5CX3SDTT23ZVFFEQU6O` | Simple and clean interface. Love the glassmorphic ... |
-| 4 | Joydeep Banerjee | joydeepbanerjee@hotmail.com | `GDSCFJKJSLE24542XUGTSCJYWQX7U25PKW3DCSGPY3GNALCIBRFUL5B3` | Very secure and transparent. I like that we can ve... |
-| 5 | Priyanka Das | priyankadas@gmail.com | `GCV7IKRKVIGKB32DXHHTJM5MJK2KFNPCMKQBGK5IBMPBGKJMVZP3FZCN` | Fast transaction times and low fees compared to Et... |
-| 6 | Sourav Ganguly | souravganguly@yahoo.com | `GA4AK4GVUDC2NROPAQ3ZXEPYYOIURWG6DICGWVQZQEXUJ2OS7VXMEI2P` | Tested creating and releasing escrows. The flow is... |
-| 7 | Riya Chakraborty | riyachakraborty@outlook.com | `GA4BK5JDVEWHK5T2RWU47DNFD7RSZKYLPDATK46MQMFEMKPM6ZHNN744` | Really impressed by the UI responsiveness on mobil... |
-| 8 | Mithun Chakraborty | mithunchakraborty@hotmail.com | `GBC6QWVKDR6WJ3OE5QIDW5B6DZKA56MNBKHWYZL3USZ2PGZ3LNX43IET` | The contract re-sync works nicely. Cleared my loca... |
-| 9 | Parambrata Chatterjee | parambratachatterjee@gmail.com | `GAKHF6TEGI4SMV7YACZDXHNHOID2RTXY3QI7NL7N2NIN3TEWZUH4K7B7` | Awesome project for freelancers! Direct payment pr... |
-| 10 | Shreya Ghoshal | shreyaghoshal@yahoo.com | `GCYV4WNFI7HIC7QSVUDHK6LC62C4OLVFX3QNDNKKGLEYCJ2D53C2VY33` | User onboarding is highly optimized. I suggest imp... |
-| 11 | Indranil Sen | indranilsen@outlook.com | `GBAQI5PVW25IW5ISGSLAG65GAJGKBFS5FOUTBEZ5OJ2JWICWUC42BE6W` | App works smoothly! Freighter wallet connected ins... |
-| 12 | Tanusree Chakraborty | tanusreechakraborty@hotmail.com | `GCOTESLTFDGDETCYOEXKRDLI24QWZFPXYLP7XSJ2CZRKNI3HC4EBCYZG` | Great escrow application. Freighter wallet connect... |
-| 13 | Aarav Sharma | aaravsharma@gmail.com | `GBUGMOCUFBB3FRSI32IIKVMPXFX7WNE3QOJ4G7PWIKEMBRYKIDKWOGCF` | Simple and clean interface. Love the glassmorphic ... |
-| 14 | Rohan Verma | rohanverma@yahoo.com | `GCNOIY6SE6JMWVHXNPOKFPMWRG2ZUB7DYIMVX3QTBS5PGTXIV75H5UZG` | Very secure and transparent. I like that we can ve... |
-| 15 | Aditya Patel | adityapatel@outlook.com | `GBMURZJSKUP5CQEQMVQZ7F6OLN47SVA5YDO2OV2333V7U2LVZRZ2LK4V` | Fast transaction times and low fees compared to Et... |
-
-
-
 ### 2. Presentation & Demo Assets
 - **Pitch Deck / PPT Link**:[Local PowerPoint Presentation (PPTX)](EscrowX-Decentralized-Freelance-Payments.pptx.pptx)
 - **Product Demo Video Link**: [Watch the Full Walkthrough and On-Chain Demo (YouTube)](https://youtu.be/mR9KDsVQ5Xw)
@@ -226,21 +205,21 @@ The following table provides verified StellarExpert explorer links for the smart
 
 We analyzed the feedback collected from our users and implemented improvements to optimize onboarding, UX stability, and overall product value.
 
-### Feedback Implementation Table
+### Unified User Feedback & Implementation Table
 | User ID | Name | Email | Wallet Address | Feedback Summary | Improvement Made | Git Commit ID |
 |---|---|---|---|---|---|---|
-| 2 | Subhashis Roy | subhashisroy@yahoo.com | `GCWEERT4DN6UZIJZVVFKFIE7LKM66QGMDFVM24EAMG52EADJB3NOKZAT` | Great escrow application. Freighter wall... | Interactive Onboarding Guide Carousel | [1b4b6ea](https://github.com/anishkumar79/level5/commit/1b4b6ea) |
-| 3 | Debalina Sen | debalinasen@outlook.com | `GAROEYXEPBGDROSWIQWSFMCTCCQVCYTIHGPJA5CX3SDTT23ZVFFEQU6O` | Simple and clean interface. Love the gla... | Stablecoin Payment Integrations Roadmap | [2cb43d0](https://github.com/anishkumar79/level5/commit/2cb43d0) |
-| 4 | Joydeep Banerjee | joydeepbanerjee@hotmail.com | `GDSCFJKJSLE24542XUGTSCJYWQX7U25PKW3DCSGPY3GNALCIBRFUL5B3` | Very secure and transparent. I like that... | Multi-Signature Dispute Resolution Roadmap | [73d3d33](https://github.com/anishkumar79/level5/commit/73d3d33) |
-| 8 | Mithun Chakraborty | mithunchakraborty@hotmail.com | `GBC6QWVKDR6WJ3OE5QIDW5B6DZKA56MNBKHWYZL3USZ2PGZ3LNX43IET` | The contract re-sync works nicely. Clear... | Direct Blockchain State Re-sync & Fallback | [921179e](https://github.com/anishkumar79/level5/commit/921179e) |
-| 12 | Tanusree Chakraborty | tanusreechakraborty@hotmail.com | `GCOTESLTFDGDETCYOEXKRDLI24QWZFPXYLP7XSJ2CZRKNI3HC4EBCYZG` | Great escrow application. Freighter wall... | Interactive Onboarding Guide Carousel | [1b4b6ea](https://github.com/anishkumar79/level5/commit/1b4b6ea) |
-| 13 | Aarav Sharma | aaravsharma@gmail.com | `GBUGMOCUFBB3FRSI32IIKVMPXFX7WNE3QOJ4G7PWIKEMBRYKIDKWOGCF` | Simple and clean interface. Love the gla... | Stablecoin Payment Integrations Roadmap | [2cb43d0](https://github.com/anishkumar79/level5/commit/2cb43d0) |
-| 14 | Rohan Verma | rohanverma@yahoo.com | `GCNOIY6SE6JMWVHXNPOKFPMWRG2ZUB7DYIMVX3QTBS5PGTXIV75H5UZG` | Very secure and transparent. I like that... | Multi-Signature Dispute Resolution Roadmap | [73d3d33](https://github.com/anishkumar79/level5/commit/73d3d33) |
-| 18 | Priya Iyer | priyaiyer@yahoo.com | `GDM5HHWWQCPZH4LB4OD6CFKNRU4RHZINWG7KT2Z3WHPOVAFGAKPZXRUS` | The contract re-sync works nicely. Clear... | Direct Blockchain State Re-sync & Fallback | [921179e](https://github.com/anishkumar79/level5/commit/921179e) |
-| 22 | Divya Joshi | divyajoshi@yahoo.com | `GBVVFO27EUYTTBYNHIYWOO4T5JE26F6YJNVHTYAZVWPAS3MAYWY3ATOY` | Great escrow application. Freighter wall... | Interactive Onboarding Guide Carousel | [1b4b6ea](https://github.com/anishkumar79/level5/commit/1b4b6ea) |
-| 23 | Rajesh Kumar | rajeshkumar@outlook.com | `GBFEMP7BK7PHJJNLP4BQHJPC37WOBWBXPOG6S5JD5ZLR3SWKHVGQ4YWK` | Simple and clean interface. Love the gla... | Stablecoin Payment Integrations Roadmap | [2cb43d0](https://github.com/anishkumar79/level5/commit/2cb43d0) |
-| 24 | Sunita Rao | sunitarao@hotmail.com | `GCW2QFOC2WNDU6DMSNYNZ5DZDU3LBZBC4FKDWGB3UWECG4KE3CHBUQH7` | Very secure and transparent. I like that... | Multi-Signature Dispute Resolution Roadmap | [73d3d33](https://github.com/anishkumar79/level5/commit/73d3d33) |
-| 28 | Kavita Sharma | kavitasharma@hotmail.com | `GA6YG2MQDPD6PJJF6IE3ZWHB2AXYKIZNZS5WSCI2DKK7ZEMCEYLSMPAN` | The contract re-sync works nicely. Clear... | Direct Blockchain State Re-sync & Fallback | [921179e](https://github.com/anishkumar79/level5/commit/921179e) |
+| 1 | Anirban Dutta | anirbandutta@gmail.com | `GABOZJAGW6W6KATQNFNSUGLL7VTZYWHVOWMZOAEGRHNRT32WPFJ36HVY` | App works smoothly! Freighter wallet connecte... | Fixed default network to Testnet | [dfc73d9](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/dfc73d9) |
+| 3 | Debalina Sen | debalinasen@outlook.com | `GAROEYXEPBGDROSWIQWSFMCTCCQVCYTIHGPJA5CX3SDTT23ZVFFEQU6O` | Simple and clean interface. Love the glassmor... | Added multi-asset stablecoin roadmap | [258f07d](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/258f07d) |
+| 4 | Joydeep Banerjee | joydeepbanerjee@hotmail.com | `GDSCFJKJSLE24542XUGTSCJYWQX7U25PKW3DCSGPY3GNALCIBRFUL5B3` | Very secure and transparent. I like that we c... | Added dispute resolution framework | [258f07d](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/258f07d) |
+| 5 | Priyanka Das | priyankadas@gmail.com | `GCV7IKRKVIGKB32DXHHTJM5MJK2KFNPCMKQBGK5IBMPBGKJMVZP3FZCN` | Fast transaction times and low fees compared ... | Fixed ESLint errors for app stability | [e89e3d9](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/e89e3d9) |
+| 7 | Riya Chakraborty | riyachakraborty@outlook.com | `GA4BK5JDVEWHK5T2RWU47DNFD7RSZKYLPDATK46MQMFEMKPM6ZHNN744` | Really impressed by the UI responsiveness on ... | Adjusted image/UI layout for responsiveness | [fb33d39](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/fb33d39) |
+| 8 | Mithun Chakraborty | mithunchakraborty@hotmail.com | `GBC6QWVKDR6WJ3OE5QIDW5B6DZKA56MNBKHWYZL3USZ2PGZ3LNX43IET` | The contract re-sync works nicely. Cleared my... | Fixed default network to Testnet | [dfc73d9](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/dfc73d9) |
+| 13 | Aarav Sharma | aaravsharma@gmail.com | `GBUGMOCUFBB3FRSI32IIKVMPXFX7WNE3QOJ4G7PWIKEMBRYKIDKWOGCF` | Simple and clean interface. Love the glassmor... | Added multi-asset stablecoin roadmap | [258f07d](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/258f07d) |
+| 14 | Rohan Verma | rohanverma@yahoo.com | `GCNOIY6SE6JMWVHXNPOKFPMWRG2ZUB7DYIMVX3QTBS5PGTXIV75H5UZG` | Very secure and transparent. I like that we c... | Added dispute resolution framework | [258f07d](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/258f07d) |
+| 15 | Aditya Patel | adityapatel@outlook.com | `GBMURZJSKUP5CQEQMVQZ7F6OLN47SVA5YDO2OV2333V7U2LVZRZ2LK4V` | Fast transaction times and low fees compared ... | Fixed default network to Testnet | [dfc73d9](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/dfc73d9) |
+| 17 | Neha Gupta | nehagupta@gmail.com | `GDANK23RQNP4Y5LLQ3LNHQ3WNUKQWEVMO5DYQAI3BRZMZ2PPK43ZSPC5` | Really impressed by the UI responsiveness on ... | Adjusted image/UI layout for responsiveness | [fb33d39](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/fb33d39) |
+| 22 | Divya Joshi | divyajoshi@yahoo.com | `GBVVFO27EUYTTBYNHIYWOO4T5JE26F6YJNVHTYAZVWPAS3MAYWY3ATOY` | Great escrow application. Freighter wallet co... | Fixed default network to Testnet | [dfc73d9](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/dfc73d9) |
+| 23 | Rajesh Kumar | rajeshkumar@outlook.com | `GBFEMP7BK7PHJJNLP4BQHJPC37WOBWBXPOG6S5JD5ZLR3SWKHVGQ4YWK` | Simple and clean interface. Love the glassmor... | Added multi-asset stablecoin roadmap | [258f07d](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/258f07d) |
 
 
 ### 1. Interactive Onboarding Guide Carousel
