@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { getConnectedAddress } from '../stellar';
+import { getConnectedAddress, getEscrowDetails, getEscrowsCount } from '../stellar';
 import { supabase } from '../supabaseClient';
 import EscrowCard from '../components/EscrowCard';
 import { Plus, ShieldAlert, BarChart3, Clock, Wallet, CircleDollarSign } from 'lucide-react';
@@ -32,13 +32,74 @@ export default function Dashboard() {
       }
       setLoading(true);
       try {
-        const { data, error } = await supabase
-          .from('escrows')
-          .select('*')
-          .order('created_at', { ascending: false });
+        // 1. Try to fetch metadata from Supabase/cache first
+        let dbEscrows = [];
+        try {
+          const { data, error } = await supabase
+            .from('escrows')
+            .select('*')
+            .order('created_at', { ascending: false });
+          if (!error && data) {
+            dbEscrows = data;
+          }
+        } catch (dbErr) {
+          console.warn('Failed to load from DB, falling back entirely to blockchain:', dbErr);
+        }
 
-        if (error) throw error;
-        setEscrows(data || []);
+        // 2. Query the counter from the smart contract on-chain
+        const count = await getEscrowsCount();
+        console.log(`On-chain escrows count: ${count}`);
+
+        // 3. Scan the blockchain for all escrows that belong to the user
+        const onChainEscrows = [];
+        const promises = [];
+        
+        for (let id = 1; id <= count; id++) {
+          promises.push(
+            getEscrowDetails(id)
+              .then(data => {
+                if (data) {
+                  // Check if connected address is participant
+                  const isParticipant = 
+                    data.client.toLowerCase() === address.toLowerCase() ||
+                    data.freelancer.toLowerCase() === address.toLowerCase();
+                  
+                  if (isParticipant) {
+                    const dbMatch = dbEscrows.find(x => Number(x.id) === id);
+                    if (dbMatch) {
+                      onChainEscrows.push({
+                        ...dbMatch,
+                        status: Number(data.status) // Sync status from chain
+                      });
+                    } else {
+                      // Construct fallback metadata from on-chain data
+                      onChainEscrows.push({
+                        id: id,
+                        title: `Escrow Agreement #${id}`,
+                        description: `Loaded directly from Stellar blockchain. client: ${data.client.substring(0, 6)}..., freelancer: ${data.freelancer.substring(0, 6)}...`,
+                        amount: Number(data.amount) / 10000000,
+                        client_address: data.client,
+                        freelancer_address: data.freelancer,
+                        token_address: data.token,
+                        release_time: Number(data.release_time),
+                        status: Number(data.status),
+                        tx_hash: null
+                      });
+                    }
+                  }
+                }
+              })
+              .catch(err => {
+                console.warn(`Failed to fetch escrow #${id} from chain:`, err);
+              })
+          );
+        }
+
+        await Promise.all(promises);
+
+        // Sort descending by ID
+        onChainEscrows.sort((a, b) => b.id - a.id);
+        setEscrows(onChainEscrows);
       } catch (err) {
         console.error('Failed to load escrows:', err);
       } finally {
