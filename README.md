@@ -2,20 +2,6 @@
 
 EscrowX is a decentralized, transparent, and low-cost freelance payment protection escrow application built on the Stellar network using Soroban smart contracts. It empowers independent contractors and clients to transact safely without high fees or payment delay risks.
 
----
-
-## 🎯 Level 5 - Blue Belt Submission Checklist
-- [x] **Public GitHub Repository:** Deployed at `https://github.com/anishkumar79/level5.git`
-- [x] **Minimum 20+ Meaningful Commits:** **22 commits** maintained sequentially on `main` branch.
-- [x] **Live Deployed Application:** Access the upgraded live app at [escrow-x-secure-freelance-payments-sepia.vercel.app](https://escrow-x-secure-freelance-payments-sepia.vercel.app/)
-- [x] **PPT / Pitch Deck:** Included [Local PowerPoint File (PPTX)](EscrowX-Decentralized-Freelance-Payments.pptx.pptx), [Google Slides Link](https://docs.google.com/presentation/d/1Ssk45Eyd4DqL19875P3_EscrowX_Pitch_Deck/edit?usp=sharing), and [Markdown Outline](pitch_deck.md).
-- [x] **Product Walkthrough / Demo Video:** Deployed on YouTube at [Watch the Full Walkthrough and On-Chain Demo](https://youtu.be/mR9KDsVQ5Xw)
-- [x] **Proof of 50+ Users Onboarded:** Logged and validated in [user_feedback.xlsx](user_feedback.xlsx) and [tx_output.json](frontend/tx_output.json).
-- [x] **Active On-Chain Transaction Activity:** 50+ fully completed lifecycle transactions (Create -> Deposit -> Release) executed on-chain with randomized XLM amounts.
-- [x] **Screenshots of Analytics & Active Usage:** View the [50+ User On-Chain Proof Screenshot](screenshots/50+_user_proof.png) showing **53 completed deals** and **51,629+ XLM transacted** on-chain!
-- [x] **User Feedback Iteration Summary:** Outlined feedback implementations (Onboarding Carousel and On-chain Fallback Scanner) with direct Git commit links in the repository.
-
----
 
 ## Deployed Smart Contract Address (Testnet)
 - **Contract ID**: `CBGL7N5GANUBPAV2UHXC5UBW3JSXGNLAKOMVJD54YNIZF6WN6PHSMQAL`
@@ -160,7 +146,7 @@ We onboarded **50 real testnet users** using a Google Form feedback collection f
 - **On-Chain Dashboard Screenshot**: [View 50+ User On-Chain Proof Screenshot](screenshots/50+_user_proof.png)
 
 ### 2. Presentation & Demo Assets
-- **Pitch Deck / PPT Link**: [EscrowX Pitch Deck (Google Slides)](https://docs.google.com/presentation/d/1Ssk45Eyd4DqL19875P3_EscrowX_Pitch_Deck/edit?usp=sharing) | [Local PowerPoint Presentation (PPTX)](EscrowX-Decentralized-Freelance-Payments.pptx.pptx) | [Local Pitch Deck Outline (Markdown)](pitch_deck.md)
+- **Pitch Deck / PPT Link**:[Local PowerPoint Presentation (PPTX)](EscrowX-Decentralized-Freelance-Payments.pptx.pptx)
 - **Product Demo Video Link**: [Watch the Full Walkthrough and On-Chain Demo (YouTube)](https://youtu.be/mR9KDsVQ5Xw)
 
 ---
