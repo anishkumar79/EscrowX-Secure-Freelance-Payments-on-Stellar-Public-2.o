@@ -260,13 +260,8 @@ mod test {
         let contract_id = env.register(EscrowContract, ());
         let client_contract = EscrowContractClient::new(&env, &contract_id);
 
-        let escrow_id = client_contract.create_escrow(
-            &client,
-            &freelancer,
-            &token.address,
-            &500,
-            &1000,
-        );
+        let escrow_id =
+            client_contract.create_escrow(&client, &freelancer, &token.address, &500, &1000);
 
         client_contract.deposit(&escrow_id);
         client_contract.refund(&escrow_id, &freelancer);
@@ -290,13 +285,8 @@ mod test {
         let contract_id = env.register(EscrowContract, ());
         let client_contract = EscrowContractClient::new(&env, &contract_id);
 
-        let escrow_id = client_contract.create_escrow(
-            &client,
-            &freelancer,
-            &token.address,
-            &500,
-            &1000,
-        );
+        let escrow_id =
+            client_contract.create_escrow(&client, &freelancer, &token.address, &500, &1000);
 
         client_contract.deposit(&escrow_id);
 
