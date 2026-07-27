@@ -146,9 +146,29 @@ export default function EscrowDetails() {
 
   if (loading) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-[60vh] text-center">
-        <Loader2 className="animate-spin text-purple-500 mb-4" size={36} />
-        <p className="text-slate-400 text-sm">Verifying escrow status on Stellar ledger...</p>
+      <div className="max-w-4xl w-full mx-auto px-6 py-10 animate-pulse space-y-6">
+        <div className="h-6 w-32 bg-slate-800 rounded mb-6"></div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="md:col-span-2 space-y-6">
+            <div className="glass-card rounded-3xl p-8 border border-white/5 space-y-6">
+              <div className="flex justify-between">
+                <div>
+                  <div className="h-4 w-40 bg-slate-800 rounded mb-2"></div>
+                  <div className="h-8 w-64 bg-slate-800 rounded"></div>
+                </div>
+                <div className="h-8 w-24 bg-slate-800 rounded"></div>
+              </div>
+              <div className="h-24 w-full bg-slate-800 rounded-xl"></div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="h-10 w-full bg-slate-800 rounded"></div>
+                <div className="h-10 w-full bg-slate-800 rounded"></div>
+              </div>
+            </div>
+          </div>
+          <div className="space-y-6">
+            <div className="glass-card rounded-3xl p-6 h-64 bg-slate-800/50 border border-white/5"></div>
+          </div>
+        </div>
       </div>
     );
   }
