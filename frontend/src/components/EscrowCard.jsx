@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom';
-import { Calendar, User, ArrowRight, ShieldAlert } from 'lucide-react';
+import { Calendar, User, ArrowRight, ShieldAlert, Copy } from 'lucide-react';
 
 export default function EscrowCard({ escrow }) {
   const { id, title, description, amount, status, client_address, freelancer_address, release_time } = escrow;
+
+  const handleCopy = (text, e) => {
+    e.preventDefault();
+    navigator.clipboard.writeText(text);
+    alert('Copied to clipboard!');
+  };
 
   const getStatusDetails = (statusVal) => {
     switch (Number(statusVal)) {
@@ -43,7 +49,7 @@ export default function EscrowCard({ escrow }) {
         </div>
 
         <h3 className="text-lg font-bold text-slate-100 mb-2 truncate" title={title}>
-          {title || `Escrow #${id}`}
+          {title || `Escrow #${id}`} <span className="text-xs text-slate-500 cursor-pointer ml-1 inline-flex items-center gap-1 hover:text-purple-400" onClick={(e) => handleCopy(id, e)}><Copy size={12}/></span>
         </h3>
         <p className="text-slate-400 text-sm line-clamp-2 mb-6">
           {description || 'No description provided.'}
@@ -56,14 +62,18 @@ export default function EscrowCard({ escrow }) {
             <User size={14} className="text-slate-500" />
             Client:
           </span>
-          <span className="font-mono">{shortAddr(client_address)}</span>
+          <span className="font-mono flex items-center gap-1 cursor-pointer hover:text-purple-400 transition-colors" onClick={(e) => handleCopy(client_address, e)}>
+            {shortAddr(client_address)} <Copy size={12} />
+          </span>
         </div>
         <div className="flex items-center justify-between text-xs text-slate-400">
           <span className="flex items-center gap-1.5">
             <User size={14} className="text-slate-500" />
             Freelancer:
           </span>
-          <span className="font-mono">{shortAddr(freelancer_address)}</span>
+          <span className="font-mono flex items-center gap-1 cursor-pointer hover:text-purple-400 transition-colors" onClick={(e) => handleCopy(freelancer_address, e)}>
+            {shortAddr(freelancer_address)} <Copy size={12} />
+          </span>
         </div>
         <div className="flex items-center justify-between text-xs text-slate-400">
           <span className="flex items-center gap-1.5">
