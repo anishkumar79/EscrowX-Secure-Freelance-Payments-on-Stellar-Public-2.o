@@ -11,7 +11,7 @@ A production-ready decentralized escrow platform built on the Stellar network. C
 - **Contract Address (Testnet):** `CCG6SKZHPC2WDNBYJHDMSUVCIPY3NCK6NL4RG2DY5A2U4EV7YPFNYHW7`
 - **Google Form Link:** [Feedback Form](https://docs.google.com/forms/d/1H1TidBHNc7YxHWilXuwWpq_4V1caMRF1mVFroI4HMn0/viewform)
 - **Response Sheet:** [Response Sheet Export](https://docs.google.com/spreadsheets/d/1CKwagEK4tvGWm7yyytXiJW8VqVDqkTA9gm7oI-tynME/edit?usp=sharing)
-- **GitHub Repository:** [EscrowX Source Code](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-)
+- **GitHub Repository:** [EscrowX Source Code](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o)
 
 ---
 
@@ -48,11 +48,11 @@ We actively collected user feedback through Google Forms to validate the MVP and
 
 | User ID | Name | Email | Wallet Address | Feedback Summary | Improvement Made | Git Commit ID |
 |---|---|---|---|---|---|---|
-| 1 | Anirban Dutta | anirbandutta4491@gmail.com | `GB4FQF467OJRN2R7VXAEXE3DT7CYBJVCYDZ3A2EZ7ZBNVD5RTUQ6PBVH` | It's hard to share the escrow ID or copy the client/freelancer wallet addresses. Please add a copy button | Added copy buttons for Escrow ID and addresses | [Commit f9caa73](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-/commit/f9caa73) |
-| 3 | Debalina Sen | debalinasen51@gmail.com | `GAX2QIUBSEKJIUN4SFXFFVRNKDRXRHXMBCVYR75VWGYFXDCJ3IQIL2OP` | I want to see my XLM balance in the app before I try to deposit funds to make sure I have enough | Shown user XLM balance before deposit | [Commit 0021ad6](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-/commit/0021ad6) |
-| 4 | Joydeep Banerjee | joydeepbanerjee59@gmail.com | `GAYG5JY7NKCFSPEE6OSHOYVJ7HNM3SRHKDM3VL6VQOWJFYBZSLGMWDMV` | I don't know if the transaction was successful or what the hash is, please add a link to the explorer | Added direct link to Stellar Explorer | [Commit 95a5fe6](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-/commit/95a5fe6) |
-| 5 | Priyanka Das | priyankadas68@gmail.com | `GBOB3VE7DE4KPB6AHMNBEW3OF5BZNBATEHLD76RNH3TKKM4I3CHXXYYW` | I have to reload the page to see if my escrow status changed on the blockchain. A refresh button would be nice | Added manual refresh button to Dashboard | [Commit a87f01e](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-/commit/a87f01e) |
-| 17 | Vikram Malhotra | vikrammalhotra21@gmail.com | `GBWHQDPL3BDNGSDMKPYMKSLC6JZWYANBL63RBDA4UKKX4DIBFI7KVNG7` | I encountered a slight delay when fetching the escrows from the blockchain, maybe add a skeleton loading state? | Implemented Skeleton Loading State in EscrowDetails | [Commit 2de500b](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-/commit/2de500b) |
+| 1 | Anirban Dutta | anirbandutta4491@gmail.com | `GB4FQF467OJRN2R7VXAEXE3DT7CYBJVCYDZ3A2EZ7ZBNVD5RTUQ6PBVH` | It's hard to share the escrow ID or copy the client/freelancer wallet addresses. Please add a copy button | Added copy buttons for Escrow ID and addresses | [Commit f9caa73](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/f9caa73) |
+| 3 | Debalina Sen | debalinasen51@gmail.com | `GAX2QIUBSEKJIUN4SFXFFVRNKDRXRHXMBCVYR75VWGYFXDCJ3IQIL2OP` | I want to see my XLM balance in the app before I try to deposit funds to make sure I have enough | Shown user XLM balance before deposit | [Commit 0021ad6](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/0021ad6) |
+| 4 | Joydeep Banerjee | joydeepbanerjee59@gmail.com | `GAYG5JY7NKCFSPEE6OSHOYVJ7HNM3SRHKDM3VL6VQOWJFYBZSLGMWDMV` | I don't know if the transaction was successful or what the hash is, please add a link to the explorer | Added direct link to Stellar Explorer | [Commit 95a5fe6](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/95a5fe6) |
+| 5 | Priyanka Das | priyankadas68@gmail.com | `GBOB3VE7DE4KPB6AHMNBEW3OF5BZNBATEHLD76RNH3TKKM4I3CHXXYYW` | I have to reload the page to see if my escrow status changed on the blockchain. A refresh button would be nice | Added manual refresh button to Dashboard | [Commit a87f01e](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/a87f01e) |
+| 17 | Vikram Malhotra | vikrammalhotra21@gmail.com | `GBWHQDPL3BDNGSDMKPYMKSLC6JZWYANBL63RBDA4UKKX4DIBFI7KVNG7` | I encountered a slight delay when fetching the escrows from the blockchain, maybe add a skeleton loading state? | Implemented Skeleton Loading State in EscrowDetails | [Commit 2de500b](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o/commit/2de500b) |
 
 ### Proof of Transactions
 | User ID | Name | Email | Role | Wallet Address | Transaction Hash (Proof) |
@@ -98,8 +98,8 @@ To run EscrowX locally, ensure you have Node.js and npm installed.
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-.git
-   cd EscrowX-Secure-Freelance-Payments-on-Stellar-
+   git clone https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o.git
+   cd EscrowX-Secure-Freelance-Payments-on-Stellar-Public-2.o
    ```
 
 2. **Start the Frontend Web App:**
