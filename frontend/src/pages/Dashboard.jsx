@@ -23,89 +23,90 @@ export default function Dashboard() {
     return () => clearInterval(interval);
   }, [address]);
 
-  // Load escrows
-  useEffect(() => {
-    async function loadData() {
-      if (!address) {
-        setLoading(false);
-        return;
-      }
-      setLoading(true);
+  const loadData = async () => {
+    if (!address) {
+      setLoading(false);
+      return;
+    }
+    setLoading(true);
+    try {
+      // 1. Try to fetch metadata from Supabase/cache first
+      let dbEscrows = [];
       try {
-        // 1. Try to fetch metadata from Supabase/cache first
-        let dbEscrows = [];
-        try {
-          const { data, error } = await supabase
-            .from('escrows')
-            .select('*')
-            .order('created_at', { ascending: false });
-          if (!error && data) {
-            dbEscrows = data;
-          }
-        } catch (dbErr) {
-          console.warn('Failed to load from DB, falling back entirely to blockchain:', dbErr);
+        const { data, error } = await supabase
+          .from('escrows')
+          .select('*')
+          .order('created_at', { ascending: false });
+        if (!error && data) {
+          dbEscrows = data;
         }
+      } catch (dbErr) {
+        console.warn('Failed to load from DB, falling back entirely to blockchain:', dbErr);
+      }
 
-        // 2. Query the counter from the smart contract on-chain
-        const count = await getEscrowsCount();
-        console.log(`On-chain escrows count: ${count}`);
+      // 2. Query the counter from the smart contract on-chain
+      const count = await getEscrowsCount();
+      console.log(`On-chain escrows count: ${count}`);
 
-        // 3. Scan the blockchain for all escrows that belong to the user
-        const onChainEscrows = [];
-        const promises = [];
-        
-        for (let id = 1; id <= count; id++) {
-          promises.push(
-            getEscrowDetails(id)
-              .then(data => {
-                if (data) {
-                  // Check if connected address is participant
-                  const isParticipant = 
-                    data.client.toLowerCase() === address.toLowerCase() ||
-                    data.freelancer.toLowerCase() === address.toLowerCase();
-                  
-                  if (isParticipant) {
-                    const dbMatch = dbEscrows.find(x => Number(x.id) === id);
-                    if (dbMatch) {
-                      onChainEscrows.push({
-                        ...dbMatch,
-                        status: Number(data.status) // Sync status from chain
-                      });
-                    } else {
-                      // Construct fallback metadata from on-chain data
-                      onChainEscrows.push({
-                        id: id,
-                        title: `Escrow Agreement #${id}`,
-                        description: `Loaded directly from Stellar blockchain. client: ${data.client.substring(0, 6)}..., freelancer: ${data.freelancer.substring(0, 6)}...`,
-                        amount: Number(data.amount) / 10000000,
-                        client_address: data.client,
-                        freelancer_address: data.freelancer,
-                        token_address: data.token,
-                        release_time: Number(data.release_time),
-                        status: Number(data.status),
-                        tx_hash: null
-                      });
-                    }
+      // 3. Scan the blockchain for all escrows that belong to the user
+      const onChainEscrows = [];
+      const promises = [];
+      
+      for (let id = 1; id <= count; id++) {
+        promises.push(
+          getEscrowDetails(id)
+            .then(data => {
+              if (data) {
+                // Check if connected address is participant
+                const isParticipant = 
+                  data.client.toLowerCase() === address.toLowerCase() ||
+                  data.freelancer.toLowerCase() === address.toLowerCase();
+                
+                if (isParticipant) {
+                  const dbMatch = dbEscrows.find(x => Number(x.id) === id);
+                  if (dbMatch) {
+                    onChainEscrows.push({
+                      ...dbMatch,
+                      status: Number(data.status) // Sync status from chain
+                    });
+                  } else {
+                    // Construct fallback metadata from on-chain data
+                    onChainEscrows.push({
+                      id: id,
+                      title: `Escrow Agreement #${id}`,
+                      description: `Loaded directly from Stellar blockchain. client: ${data.client.substring(0, 6)}..., freelancer: ${data.freelancer.substring(0, 6)}...`,
+                      amount: Number(data.amount) / 10000000,
+                      client_address: data.client,
+                      freelancer_address: data.freelancer,
+                      token_address: data.token,
+                      release_time: Number(data.release_time),
+                      status: Number(data.status),
+                      tx_hash: null
+                    });
                   }
                 }
-              })
-              .catch(err => {
-                console.warn(`Failed to fetch escrow #${id} from chain:`, err);
-              })
-          );
-        }
-
-        await Promise.all(promises);
-
-        // Sort descending by ID
-        onChainEscrows.sort((a, b) => b.id - a.id);
-        setEscrows(onChainEscrows);
-      } catch (err) {
-        console.error('Failed to load escrows:', err);
-      } finally {
-        setLoading(false);
+              }
+            })
+            .catch(err => {
+              console.warn(`Failed to fetch escrow #${id} from chain:`, err);
+            })
+        );
       }
+
+      await Promise.all(promises);
+
+      // Sort descending by ID
+      onChainEscrows.sort((a, b) => b.id - a.id);
+      setEscrows(onChainEscrows);
+    } catch (err) {
+      console.error('Failed to load escrows:', err);
+    } finally {
+      setLoading(false);
     }
+  };
+
+  // Load escrows
+  useEffect(() => {
     loadData();
   }, [address]);
 
@@ -160,13 +161,23 @@ export default function Dashboard() {
           <h1 className="text-3xl font-bold text-slate-100 mt-0 mb-1">Your Escrows</h1>
           <p className="text-slate-400 text-sm">Monitor, fund, and manage your freelance agreements on Stellar.</p>
         </div>
-        <Link
-          to="/create"
-          className="gradient-btn flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold cursor-pointer shadow-md shadow-purple-500/10"
-        >
-          <Plus size={16} />
-          <span>New Agreement</span>
-        </Link>
+        <div className="flex items-center gap-3">
+          <button 
+            onClick={loadData}
+            disabled={loading}
+            className="flex items-center gap-2 px-4 py-3 rounded-xl bg-slate-900/60 border border-white/5 hover:border-purple-500/30 text-slate-300 hover:text-white transition-all cursor-pointer text-sm font-semibold disabled:opacity-50"
+          >
+            <RotateCcw size={16} className={loading ? "animate-spin" : ""} />
+            <span>Refresh</span>
+          </button>
+          <Link
+            to="/create"
+            className="gradient-btn flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold cursor-pointer shadow-md shadow-purple-500/10"
+          >
+            <Plus size={16} />
+            <span>New Agreement</span>
+          </Link>
+        </div>
       </div>
 
       {/* Stats Cards */}
