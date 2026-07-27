@@ -201,7 +201,10 @@ export default function EscrowDetails() {
 
             <div className="flex justify-between items-start gap-4">
               <div>
-                <span className="text-xs text-slate-500 font-bold uppercase tracking-wider">Escrow Agreement #{id}</span>
+                <span className="text-xs text-slate-500 font-bold uppercase tracking-wider flex items-center gap-2">
+                  Escrow Agreement #{id} 
+                  <a href={`https://stellar.expert/explorer/testnet/contract/CCG6SKZHPC2WDNBYJHDMSUVCIPY3NCK6NL4RG2DY5A2U4EV7YPFNYHW7`} target="_blank" rel="noreferrer" className="text-purple-400 hover:text-purple-300 flex items-center gap-1" title="View Contract on Explorer"><ExternalLink size={12} /></a>
+                </span>
                 <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-100 mt-1 mb-0">{title}</h1>
               </div>
               <div className="text-right">
