@@ -8,6 +8,7 @@ A production-ready decentralized escrow platform built on the Stellar network. C
 - **Live MVP (Frontend):** [https://escrowx-secure-freelance.vercel.app/](https://escrowx-secure-freelance.vercel.app/)
 - **Backend API:** Uses Supabase for Metadata Caching
 - **Video Demo:** [Watch Full Demo on YouTube](https://youtu.be/mR9KDsVQ5Xw)
+- **Pitch Deck:** [View Pitch Deck (Google Slides)](https://docs.google.com/presentation/d/1VHTVturomk5Q9evszTtNGGXrHhU2tcLn/edit?usp=sharing&ouid=114494973489055894068&rtpof=true&sd=true)
 - **Contract Address (Testnet):** `CCG6SKZHPC2WDNBYJHDMSUVCIPY3NCK6NL4RG2DY5A2U4EV7YPFNYHW7`
 - **Google Form Link:** [Feedback Form](https://docs.google.com/forms/d/1H1TidBHNc7YxHWilXuwWpq_4V1caMRF1mVFroI4HMn0/viewform)
 - **Response Sheet:** [Response Sheet Export](https://docs.google.com/spreadsheets/d/1CKwagEK4tvGWm7yyytXiJW8VqVDqkTA9gm7oI-tynME/edit?usp=sharing)
