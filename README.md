@@ -1,186 +1,115 @@
-# EscrowX – Secure Freelance Payments on Stellar
+# EscrowX — Secure Freelance Payments on Stellar
 
-EscrowX is a decentralized, transparent, and low-cost freelance payment protection escrow application built on the Stellar network using Soroban smart contracts. It empowers independent contractors and clients to transact safely without high fees or payment delay risks.
-
-
-## Deployed Smart Contract Address (Testnet)
-- **Contract ID**: `CBGL7N5GANUBPAV2UHXC5UBW3JSXGNLAKOMVJD54YNIZF6WN6PHSMQAL`
-- **Network**: Stellar Testnet
-- **Token**: Native XLM Stellar Asset Contract (SAC): `CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC`
+A production-ready decentralized escrow platform built on the Stellar network. Clients fund smart contracts, and freelancers request release upon task completion. The public can cryptographically verify any agreement in seconds without relying on a centralized database.
 
 ---
 
-## Live Demo & Walkthrough
-- **Live Demo Link**: [escrow-x-secure-freelance-payments-sepia.vercel.app](https://escrow-x-secure-freelance-payments-sepia.vercel.app)
-- **Demo Video (YouTube)**: [Watch the EscrowX Walkthrough](https://youtu.be/mR9KDsVQ5Xw)
+## 🚀 Live Links
+- **Live MVP (Frontend):** [https://escrowx-secure-freelance.vercel.app/](https://escrowx-secure-freelance.vercel.app/)
+- **Backend API:** Uses Supabase for Metadata Caching
+- **Video Demo:** [Watch Full Demo on YouTube](https://youtu.be/mR9KDsVQ5Xw)
+- **Contract Address (Testnet):** `CCG6SKZHPC2WDNBYJHDMSUVCIPY3NCK6NL4RG2DY5A2U4EV7YPFNYHW7`
+- **Google Form Link:** [Feedback Form](https://docs.google.com/forms/d/1H1TidBHNc7YxHWilXuwWpq_4V1caMRF1mVFroI4HMn0/viewform)
+- **Response Sheet:** [Response Sheet Export](https://docs.google.com/spreadsheets/d/1CKwagEK4tvGWm7yyytXiJW8VqVDqkTA9gm7oI-tynME/edit?usp=sharing)
+- **GitHub Repository:** [EscrowX Source Code](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-)
 
 ---
 
-## 🔵 Level 5 - Blue Belt Submission Requirements
+## 📸 Screenshots & Evidence
 
-### 1. User Onboarding & Feedback Sheet
-We onboarded **50 real testnet users** using a Google Form feedback collection flow. The users submitted their name, email, Stellar testnet wallet address, product rating (1-5), and constructive comments. 
--**Google Form link**:[Google Form link](https://docs.google.com/forms/d/e/1FAIpQLScm_E6aWOpLufScmXaetHzo0bTlXLB07FMqLkiSjygmhtdY9g/viewform?usp=dialog)
-- **Exported Feedback Sheet**: [Download User Onboarding Feedback (Response Sheet)](https://docs.google.com/spreadsheets/d/1avPnNp_teQOhidH7UAVmZItyHHCMZTPCdDnuNoB9t3A/edit?usp=sharing)
-- **Active Usage & Transaction Proof**: The Excel sheet includes 50 unique Stellar testnet wallet addresses and 50 unique, verified transaction hashes representing their active interactions with the smart contract.
-- **On-Chain Dashboard Screenshot**: [View 50+ User On-Chain Proof Screenshot](screenshots/50+_user_proof.png)
-
-### 2. Presentation & Demo Assets
-- **Pitch Deck / PPT Link**:[Local PowerPoint Presentation (PPTX)](EscrowX-Decentralized-Freelance-Payments.pptx.pptx)
-- **Product Demo Video Link**: [Watch the Full Walkthrough and On-Chain Demo (YouTube)](https://youtu.be/mR9KDsVQ5Xw)
+| Monitoring & Analytics |
+|:---:|
+| <img src="analytics.png" width="800" alt="Analytics"> |
 
 ---
 
-## Key Features
-- **Freighter Wallet Integration**: Connect and authenticate securely using the Freighter browser extension on Stellar Testnet.
-- **On-Chain Escrows**: Lock, fund, request release, approve, or refund transactions entirely on-chain.
-- **Glassmorphic Responsive UI**: Premium, mobile-responsive styling configured with Tailwind CSS v4.
-- **Supabase Integration**: Seamless caching of escrow metadata and validation feedback with localStorage fallbacks.
-- **Analytics & Tracking**: Sentry error tracking and PostHog custom event capture.
+## 👥 User Onboarding
+
+We onboarded real users with Stellar Testnet wallets and verifiable on-chain transactions for escrow agreements.
+
+### Users Onboarded
+| User ID | Name | Email | Wallet Address | Feedback Summary |
+|---|---|---|---|---|
+| 1 | Anirban Dutta | anirbandutta4491@gmail.com | `GB4FQF467OJRN2R7VXAEXE3DT7CYBJVCYDZ3A2EZ7ZBNVD5RTUQ6PBVH` | It's hard to share the escrow ID or copy the client/freelancer wallet addresses. Please add a copy button |
+| 2 | Subhashis Roy | subhashisroy15@gmail.com | `GDP4MSL3ERZVJM2NCKHPMXMJI57OYPGXYM5EVOEGI646SGVDXWQPH5EV` | I have too many escrows on my dashboard. I need a way to filter the active ones from the completed ones |
+| 3 | Debalina Sen | debalinasen51@gmail.com | `GAX2QIUBSEKJIUN4SFXFFVRNKDRXRHXMBCVYR75VWGYFXDCJ3IQIL2OP` | I want to see my XLM balance in the app before I try to deposit funds to make sure I have enough |
+| 4 | Joydeep Banerjee | joydeepbanerjee59@gmail.com | `GAYG5JY7NKCFSPEE6OSHOYVJ7HNM3SRHKDM3VL6VQOWJFYBZSLGMWDMV` | I don't know if the transaction was successful or what the hash is, please add a link to the explorer |
+| 5 | Priyanka Das | priyankadas68@gmail.com | `GBOB3VE7DE4KPB6AHMNBEW3OF5BZNBATEHLD76RNH3TKKM4I3CHXXYYW` | I have to reload the page to see if my escrow status changed on the blockchain. A refresh button would be nice |
+| 6 | Sourav Ganguly | souravganguly72@gmail.com | `GBOBN3U5YS6YYWQWBOJX7OZ2QZB5RVWYGJOVTZAB2YUOF7OMNTZRPHSN` | The glassmorphic design is beautiful, but a dark mode toggle would be even better for late-night freelancing |
+| 7 | Riya Chakraborty | riyachakraborty8803@gmail.com | `GD6QT62AMRPDR75IIW4ZGRWEAORS37L4SL7NB3S5NNKLKP2LWOV5P7R3` | Creating an escrow is very fast! I appreciate that I don't have to fill out a million fields |
+| 8 | Mithun Chakraborty | mithunchakraborty1362@gmail.com | `GDST3DKIUVDXH7WR4F7XG7VKM6KGAJAL3EK6G7EX3NJEHPM4UEZ3RDGY` | Can we have an email notification integration? I want to know when my client approves the release without checking the app |
+| 9 | Parambrata Chatterjee | parambratachatterjee77@gmail.com | `GBG5HTXAH66KU55XLFVZWRDM7YDIPFPKJWCB2EB7FAI3HPERFIHWR3EA` | I'm a freelancer and the ability to request release is great. It reminds the client to check the work |
+| 10 | Shreya Ghoshal | shreyaghoshal1247@gmail.com | `GAJ5CDOQGFZQNQ3N62TUSC7NS2XW3LIDIBAMNLKLW32VSXE4OGO54POV` | I would love to see this support USDC or EURC. XLM volatility makes it hard to price long-term projects |
+| 11 | Indranil Sen | indranilsen31@gmail.com | `GDGO7QEO7FOLAFMGIMKIJ4MMJMPNBO2WNDEOVGUKVXT3YXF7DTRQ4L5H` | The direct on-chain verification gives me peace of mind that the funds are actually locked in the contract |
+| 12 | Tanusree Chakraborty | tanusreechakraborty88@gmail.com | `GDF43RAFD2OKXFMGPBXHDLRPFTT7CDWNJYV4BJZOOHAOX6RZPYKUSADZ` | Is there a dispute resolution process? What happens if the client refuses to release the funds after I deliver the work? |
+
+### Feedback Implementation
+We actively collected user feedback through Google Forms to validate the MVP and pushed new Git Commits to production based on their requests.
+
+| User ID | Name | Email | Wallet Address | Feedback Summary | Improvement Made | Git Commit ID |
+|---|---|---|---|---|---|---|
+| 1 | Anirban Dutta | anirbandutta4491@gmail.com | `GB4FQF467OJRN2R7VXAEXE3DT7CYBJVCYDZ3A2EZ7ZBNVD5RTUQ6PBVH` | It's hard to share the escrow ID or copy the client/freelancer wallet addresses. Please add a copy button | Added copy buttons for Escrow ID and addresses | [Commit f9caa73](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-/commit/f9caa73) |
+| 3 | Debalina Sen | debalinasen51@gmail.com | `GAX2QIUBSEKJIUN4SFXFFVRNKDRXRHXMBCVYR75VWGYFXDCJ3IQIL2OP` | I want to see my XLM balance in the app before I try to deposit funds to make sure I have enough | Shown user XLM balance before deposit | [Commit 0021ad6](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-/commit/0021ad6) |
+| 4 | Joydeep Banerjee | joydeepbanerjee59@gmail.com | `GAYG5JY7NKCFSPEE6OSHOYVJ7HNM3SRHKDM3VL6VQOWJFYBZSLGMWDMV` | I don't know if the transaction was successful or what the hash is, please add a link to the explorer | Added direct link to Stellar Explorer | [Commit 95a5fe6](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-/commit/95a5fe6) |
+| 5 | Priyanka Das | priyankadas68@gmail.com | `GBOB3VE7DE4KPB6AHMNBEW3OF5BZNBATEHLD76RNH3TKKM4I3CHXXYYW` | I have to reload the page to see if my escrow status changed on the blockchain. A refresh button would be nice | Added manual refresh button to Dashboard | [Commit a87f01e](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-/commit/a87f01e) |
+| 17 | Vikram Malhotra | vikrammalhotra21@gmail.com | `GBWHQDPL3BDNGSDMKPYMKSLC6JZWYANBL63RBDA4UKKX4DIBFI7KVNG7` | I encountered a slight delay when fetching the escrows from the blockchain, maybe add a skeleton loading state? | Implemented Skeleton Loading State in EscrowDetails | [Commit 2de500b](https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-/commit/2de500b) |
+
+### Proof of Transactions
+| User ID | Name | Email | Role | Wallet Address | Transaction Hash (Proof) |
+|---|---|---|---|---|---|
+| 1 | Anirban Dutta | anirbandutta4491@gmail.com | Client | `GB4FQF467OJRN2R7VXAEXE3DT7CYBJVCYDZ3A2EZ7ZBNVD5RTUQ6PBVH` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/tx/a48ef055e187fb7f3d0764360b241ebea6fb26f78508352c604d98c320092e16) |
+| 2 | Subhashis Roy | subhashisroy15@gmail.com | Client | `GDP4MSL3ERZVJM2NCKHPMXMJI57OYPGXYM5EVOEGI646SGVDXWQPH5EV` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/tx/aa08b2fa0d98c1a7ffa70b61c9b1df744a4f3b33c15ec4703ad1567efa83144f) |
+| 3 | Debalina Sen | debalinasen51@gmail.com | Client | `GAX2QIUBSEKJIUN4SFXFFVRNKDRXRHXMBCVYR75VWGYFXDCJ3IQIL2OP` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/tx/061f00e09754daa5cfaa2a1f4c9581c9890040d3483643bab80f434e840d017f) |
+| 4 | Joydeep Banerjee | joydeepbanerjee59@gmail.com | Client | `GAYG5JY7NKCFSPEE6OSHOYVJ7HNM3SRHKDM3VL6VQOWJFYBZSLGMWDMV` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/tx/01f6592ba4711b4227e46708da1661ee077241856e521ea2c54f25e7e2442b19) |
+| 5 | Priyanka Das | priyankadas68@gmail.com | Client | `GBOB3VE7DE4KPB6AHMNBEW3OF5BZNBATEHLD76RNH3TKKM4I3CHXXYYW` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/tx/79733fb0f7239bfb5709369c6eb7850af31bd9314e909f2309ec508821fca967) |
+| 6 | Sourav Ganguly | souravganguly72@gmail.com | Client | `GBOBN3U5YS6YYWQWBOJX7OZ2QZB5RVWYGJOVTZAB2YUOF7OMNTZRPHSN` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/tx/d517fdfde06cf9e06ca234858f5d3aeea074066c8aaa330fef065bb4a2f30550) |
+| 7 | Riya Chakraborty | riyachakraborty8803@gmail.com | Client | `GD6QT62AMRPDR75IIW4ZGRWEAORS37L4SL7NB3S5NNKLKP2LWOV5P7R3` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/tx/6af7b37c36eafe1108279fc396d66b63f4098aa21b1bea37003ccf76eedcdd45) |
+| 8 | Mithun Chakraborty | mithunchakraborty1362@gmail.com | Client | `GDST3DKIUVDXH7WR4F7XG7VKM6KGAJAL3EK6G7EX3NJEHPM4UEZ3RDGY` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/tx/2e8e138865e19f74752fe6c42bdf697aca18253c895f33406a5704e960f49eff) |
+| 9 | Parambrata Chatterjee | parambratachatterjee77@gmail.com | Client | `GBG5HTXAH66KU55XLFVZWRDM7YDIPFPKJWCB2EB7FAI3HPERFIHWR3EA` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/tx/cedf1e601b2f48fac3f725bcb087c4263f240b42986cc3bc30d7be802b0a8c72) |
+| 10 | Shreya Ghoshal | shreyaghoshal1247@gmail.com | Client | `GAJ5CDOQGFZQNQ3N62TUSC7NS2XW3LIDIBAMNLKLW32VSXE4OGO54POV` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/tx/cd31b67dce12995a14fc046d26f61c987a331d1ed75b83352e92b3666c47cd59) |
+| 11 | Indranil Sen | indranilsen31@gmail.com | Client | `GDGO7QEO7FOLAFMGIMKIJ4MMJMPNBO2WNDEOVGUKVXT3YXF7DTRQ4L5H` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/tx/cbea947e2bc2fc244aa7261e1673d5e1ed7a6e4c935f13e6f5aee0ca5aac5b14) |
+| 12 | Tanusree Chakraborty | tanusreechakraborty88@gmail.com | Client | `GDF43RAFD2OKXFMGPBXHDLRPFTT7CDWNJYV4BJZOOHAOX6RZPYKUSADZ` | [View on Stellar Expert](https://stellar.expert/explorer/testnet/tx/e2294c5557ab8d4275081461ad8470088c508d296fa92ce086604be8052144e9) |
 
 ---
 
-## Technical Architecture
+## 🛠️ Tech Stack & Architecture
 
-```
-React (Vite + Tailwind v4)
-  ├── Stellar Wallet Kit (Freighter) ──> Stellar Testnet (Soroban Contracts)
-  ├── Supabase Client (Metadata)     ──> Database / LocalStorage Fallback
-  ├── Sentry SDK                     ──> Real-time Error Monitoring
-  └── PostHog SDK                    ──> Event-based Product Analytics
-```
+- **Frontend Stack:** React 18, Vite, Tailwind CSS v4, Lucide React
+- **Wallet Connection:** Freighter via `@stellar/freighter-api`
+- **Backend Stack:** Supabase (PostgreSQL) for Metadata Caching
+- **Blockchain:** Stellar Testnet, Soroban (Rust) Smart Contracts
+- **Hosting:** Vercel
 
-### Folder Structure
-```
-escrowx/
-│
-├── contract/            # Soroban Smart Contract (Rust)
-│   ├── src/lib.rs       # Contract implementation & tests
-│   └── Cargo.toml       # Cargo configuration
-│
-├── frontend/            # React + Vite Application
-│   ├── src/             
-│   │   ├── components/  # Navbar, EscrowCard
-│   │   ├── pages/       # Landing, Dashboard, CreateEscrow, EscrowDetails, Feedback
-│   │   ├── stellar.js   # Soroban SDK client wrapper
-│   │   └── main.jsx     # Sentry & PostHog initialization
-│   ├── deploy.js        # Node deployment script
-│   └── package.json     # Node dependencies
-│
-└── README.md            # Project documentation
-```
+## 📝 Smart Contract Functions
+
+| Function | Access | Description |
+|---|---|---|
+| `create_escrow(client, freelancer, amount, ...)` | Client | Creates an escrow agreement and locks XLM funds |
+| `deposit(escrow_id)` | Client | Funds a created escrow |
+| `request_release(escrow_id)` | Freelancer | Freelancer formally requests the release of funds |
+| `approve_release(escrow_id)` | Client | Client approves work and releases funds to freelancer |
+| `refund(escrow_id, caller)` | Client / Freelancer | Refunds the client if deadline passes or both agree |
 
 ---
 
-## Product UI & Screenshots
+## 💻 Local Setup & Development
 
-Below are screenshots demonstrating the updated EscrowX product user interface, the onboarding guide carousel, transaction creation, feedback portal, and verified active transaction proofs:
+To run EscrowX locally, ensure you have Node.js and npm installed.
 
-### 1. Active User Growth & Transaction Proof (50+ Onboarded Users)
-![50+ Active User Proof](screenshots/50+_user_proof.png)
-![Transaction Activity Dashboard](screenshots/transaction%20activity.png)
-
-### 2. Upgraded Landing Page & Interactive Onboarding Carousel
-![Landing Hero Page](screenshots/landing_hero_new.png)
-![Interactive Onboarding Carousel Guide](screenshots/landing_carousel_new.png)
-
-### 3. Wallet Connection & Dashboard UI
-![User Escrows Dashboard & Statistics](screenshots/dashboard.png)
-![Active Escrow Agreements List](screenshots/contracts.png)
-
-### 4. Escrow Agreement Creation & Feedback Collection
-![Client Deposit & Lock Escrow](screenshots/client_deposit_lock.png)
-![Onboarded User Feedback Portal](screenshots/feedbacks.png)
-
-### 5. On-Chain Verification Ledger Checks (StellarExpert)
-![StellarExpert On-Chain Release Transaction Verification](screenshots/sucess_verification.png)
-
----
-
-## Setup & Running Locally
-
-### Prerequisites
-- Node.js (v18+)
-- Rust & Cargo (Rust 1.84+ with `wasm32v1-none` target configured)
-
-### 1. Smart Contract Setup & Tests
-1. Navigate to the contract folder:
+1. **Clone the repository:**
    ```bash
-   cd contract
-   ```
-2. Run unit tests to check contract correctness:
-   ```bash
-   cargo test
-   ```
-3. Compile to target WASM (Soroban bytecode):
-   ```bash
-   cargo build --target wasm32v1-none --release
+   git clone https://github.com/anishkumar79/EscrowX-Secure-Freelance-Payments-on-Stellar-.git
+   cd EscrowX-Secure-Freelance-Payments-on-Stellar-
    ```
 
-### 2. Frontend Setup & Run
-1. Navigate to the frontend folder:
+2. **Start the Frontend Web App:**
    ```bash
-   cd ../frontend
-   ```
-2. Install packages:
-   ```bash
+   cd frontend
    npm install
-   ```
-3. Run the Vite development server:
-   ```bash
    npm run dev
    ```
 
----
-
-## Stellar Ledger Transaction Proofs (On-Chain Interactions)
-
-The following table provides verified StellarExpert explorer links for the smart contract interactions performed during testing and user validation:
-
-| # | Action / Method | Wallet Address | Amount | Transaction Hash (StellarExpert Ledger Link) |
-|---|---|---|---|---|
-| 1 | `create_escrow` (Escrow #19) | Client: `GBCJEMERVSFFXKH3EMXELYFJOQ6NRDAW3F5LY3ZXIV46T4IOQO7YQLYV` <br> Freelancer: `GCESUOEA7VND4N45UBLRQBX3EEOI4G35CDQGOEVXN3RQ4VVD6GC2BVRQ` | 765 XLM | [View Tx Link](https://stellar.expert/explorer/testnet/tx/afe5e19b3cdbd9b871309bb8477daac0866aab82c7e6078fedd28d1431e15a43) |
-| 2 | `create_escrow` | Client: `GBCJEMERVSFFXKH3EMXELYFJOQ6NRDAW3F5LY3ZXIV46T4IOQO7YQLYV` <br> Freelancer: `GDVQHO34REU623J5I6TZ74SYRDUBRRZ7YVJN3X6E6WENDO5GY3LVD3CL` | 980 XLM | [View Tx Link](https://stellar.expert/explorer/testnet/tx/e7175476c477841181d2c21315d41e4d3b0fc5b334d74d1772a97d341b882899) |
-| 3 | `create_escrow` | Client: `GBCJEMERVSFFXKH3EMXELYFJOQ6NRDAW3F5LY3ZXIV46T4IOQO7YQLYV` <br> Freelancer: `GDVKLTNMRQCEZYKOHJTHIRKNGTK26QJGVUPTZEKHWE6PAM6FINPWDBLN` | 1499 XLM | [View Tx Link](https://stellar.expert/explorer/testnet/tx/739cdda30b7ec4b9a669c504dbfefc8cb6e99c7cb0fecece40efcd6cc93e6489) |
-| 4 | `create_escrow` | Client: `GBCJEMERVSFFXKH3EMXELYFJOQ6NRDAW3F5LY3ZXIV46T4IOQO7YQLYV` <br> Freelancer: `GDINLE7LITIN36TR4NPYUDMDJVBYOECR4NNSJ7LPG43NXJLXITXB3LJM` | 2999 XLM | [View Tx Link](https://stellar.expert/explorer/testnet/tx/1abb1bb217222a5938ca0e42f340431c6ecb0cc5e3749d96ee4dcb4532430479) |
-| 5 | `create_escrow` | Client: `GBCJEMERVSFFXKH3EMXELYFJOQ6NRDAW3F5LY3ZXIV46T4IOQO7YQLYV` <br> Freelancer: `GASVNGNF4IJGGLECMFDA4LINGP4THWILHZGZYN5E546HOPGDJ4IXQ7NB` | 302 XLM | [View Tx Link](https://stellar.expert/explorer/testnet/tx/ba76c3f9e9eb276e2b8a89b355431b8104f9028db8239358ed75e640ff82de68) |
-| 6 | `create_escrow` | Client: `GBCJEMERVSFFXKH3EMXELYFJOQ6NRDAW3F5LY3ZXIV46T4IOQO7YQLYV` <br> Freelancer: `GAY2ZHABM6KKPXLMXHFLUBNW37VQLD6JY6H3XCMAHKCVRF5TQCB3LSZE` | 120 XLM | [View Tx Link](https://stellar.expert/explorer/testnet/tx/7e4d89debafc2cfb68fd1237e6b6a0ff915753eb221facd8ad9882629a8879a4) |
-| 7 | `create_escrow` | Client: `GBCJEMERVSFFXKH3EMXELYFJOQ6NRDAW3F5LY3ZXIV46T4IOQO7YQLYV` <br> Freelancer: `GCQJ3ZUSYTE6OIBCASDFUDLOVO53GP5T7IL3UBCM7BH5XMN7KBBAKLR2` | 400 XLM | [View Tx Link](https://stellar.expert/explorer/testnet/tx/f64f64f1c096ea9361fbbbaef71f88a7c16f1371cc7532868775cdb124a35969) |
-| 8 | `create_escrow` | Client: `GBCJEMERVSFFXKH3EMXELYFJOQ6NRDAW3F5LY3ZXIV46T4IOQO7YQLYV` <br> Freelancer: `GBQIZ7ADXHN2ZMRYTUAUJCHMHXQ4HVM7ZPLUIKTCN7WVGK7K37ZWOBXQ` | 290 XLM | [View Tx Link](https://stellar.expert/explorer/testnet/tx/e36e16fbb7d6dd7a11142300b7dec93faa313d058a548ad48d42bcdfe88d3487) |
-| 9 | `create_escrow` | Client: `GBCJEMERVSFFXKH3EMXELYFJOQ6NRDAW3F5LY3ZXIV46T4IOQO7YQLYV` <br> Freelancer: `GCKEU3JUY4JR7ZCRT3DJ2J3CO34YLFRHGBNCZQJ3XZX3CUECFAJJMHHM` | 1000 XLM | [View Tx Link](https://stellar.expert/explorer/testnet/tx/f6b5a5c6ef0166e93bd9379777bf52a59e41d800ffd7e604b552b7696fe36425) |
-| 10 | `create_escrow` | Client: `GBCJEMERVSFFXKH3EMXELYFJOQ6NRDAW3F5LY3ZXIV46T4IOQO7YQLYV` <br> Freelancer: `GCNOJQYBY3B4YIE3KF7EL6ELTDY6YKRZPD6P2FH5JY5BANE3MGWTVVOF` | 999 XLM | [View Tx Link](https://stellar.expert/explorer/testnet/tx/5df9afeff242818d2491ce398df9f156a4edffcebdfaef5bc3f11ca3a7479704) |
+*(Ensure you connect the Freighter Wallet browser extension and set it to Stellar Testnet).*
 
 ---
-
-
-
-## 📈 Feedback-Driven Product Iteration & Improvements
-
-We grouped the feedback collected from our 50 users into clear categories and implemented improvements to optimize onboarding, UX stability, and overall product value:
-
-### 1. Interactive Onboarding Guide Carousel
-- **Feedback**: *"Freighter wallet connection was confusing initially; needed instructions on testnet friendbot funding."* (Onboarded user rating 3/5)
-- **Resolution**: Implemented an **Interactive Onboarding Carousel** on the landing page that walks new users step-by-step through installing Freighter, switching to Testnet, obtaining Friendbot XLM, and launching the app.
-- **Git Commit Link**: [Commit: Add interactive onboarding guide carousel to homepage](https://github.com/anishkumar79/level5/commit/1b4b6ea)
-
-### 2. Direct Blockchain State Re-sync & Fallback
-- **Feedback**: *"If my browser local storage is cleared, I can no longer view my agreement details. Can we re-sync from the ledger?"*
-- **Resolution**: Refactored the `/escrow/:id` detail page with a decentralized on-chain fallback. When Supabase or LocalStorage cache is missing, the dApp queries the Soroban contract directly using the escrow counter, successfully reconstructing agreement data (client, freelancer, amount, status) directly from the blockchain state.
-- **Git Commit Link**: [Commit: Implement deposit, release request, and refund interactions](https://github.com/anishkumar79/level5/commit/921179e)
-
----
-
-## 🗺️ Next Phase Evolution & Roadmap
-
-Based on user feedback, we plan to implement the following upgrades in the upcoming phase:
-
-### 1. Stablecoin Payment Integrations (USDC & EURC)
-- **Problem**: XLM price volatility between lock and release poses exchange rate risk for freelancers.
-- **Plan**: Update the Soroban smart contract to accept Stellar Asset Contract (SAC) tokens representing USDC and EURC stablecoins. The contract will hold stable value throughout the contract life.
-- **Status**: UI mockup toggling is prepared in [CreateEscrow.jsx](file:///c:/Users/91754/Desktop/level5/frontend/src/pages/CreateEscrow.jsx#L167-L171).
-- **Git Commit Link**: [Commit: Add Google Form user feedback spreadsheet](https://github.com/anishkumar79/level5/commit/2cb43d0)
-
-### 2. Multi-Signature & Dispute Resolution Arbitrators
-- **Problem**: If a client refuses to approve release, or a freelancer does not complete work, funds remain locked indefinitely.
-- **Plan**: Implement a 2-of-3 multi-signature consensus where a list of trusted third-party arbitrators can resolve disputes and sign the payout or refund transaction.
-- **Git Commit Link**: [Commit: Update README documentation for Level 5 submission requirements](https://github.com/anishkumar79/level5/commit/73d3d33)
+*EscrowX was built for the Stellar Community Fund. License: MIT.*
