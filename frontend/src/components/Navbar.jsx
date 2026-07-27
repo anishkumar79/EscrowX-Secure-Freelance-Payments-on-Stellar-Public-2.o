@@ -5,6 +5,7 @@ import { Wallet, LogOut, CheckCircle, Shield } from 'lucide-react';
 
 export default function Navbar() {
   const [address, setAddress] = useState(getConnectedAddress());
+  const [balance, setBalance] = useState(null);
   const [connecting, setConnecting] = useState(false);
   const location = useLocation();
 
@@ -17,6 +18,19 @@ export default function Navbar() {
       }
     }, 1000);
     return () => clearInterval(interval);
+  }, [address]);
+
+  useEffect(() => {
+    if (address) {
+      fetch(`https://horizon-testnet.stellar.org/accounts/${address}`)
+        .then(res => res.json())
+        .then(data => {
+            const xlmBalance = data.balances?.find(b => b.asset_type === 'native')?.balance;
+            if (xlmBalance) setBalance(parseFloat(xlmBalance).toFixed(2));
+        }).catch(err => console.error(err));
+    } else {
+      setBalance(null);
+    }
   }, [address]);
 
   const handleConnect = async () => {
@@ -68,6 +82,7 @@ export default function Navbar() {
             <div className="flex items-center gap-2 bg-slate-900/80 border border-emerald-500/20 text-emerald-400 px-4 py-2 rounded-xl text-sm font-semibold shadow-inner">
               <CheckCircle size={16} />
               <span>{shortAddress(address)}</span>
+              {balance && <span className="ml-2 pl-2 border-l border-emerald-500/30 text-emerald-300">{balance} XLM</span>}
             </div>
             <button 
               onClick={handleDisconnect}
